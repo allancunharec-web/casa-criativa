@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Limpeza Criativa | Produtos de limpeza em Araçariguama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF; --bg-soft:#F6F7F6; --mat:#F1F3F1; --ink:#181C1A; --ink-soft:#69706A;
+  --line:#E5E8E4; --line-strong:#CFD3CC;
+  --accent:#2A6DF4; --accent-dark:#1B54D1; --accent-ink:#FFFFFF; --accent-soft:#E8EFFE;
+  --badge:#E4572E; --badge-ink:#FFFFFF;
+  --whatsapp:#1FAF55;
+  --font:"Plus Jakarta Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --shadow-sm:0 1px 3px rgba(20,22,18,.06),0 1px 2px rgba(20,22,18,.04);
+  --shadow-md:0 20px 44px rgba(16,20,16,.16);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 190px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:15.5px;line-height:1.55;font-weight:400}
+img{max-width:100%;display:block}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.num{font-variant-numeric:tabular-nums}
+
+/* Announcement bar */
+.announce{background:var(--ink);color:#fff;font-size:.78rem;font-weight:600;text-align:center;padding:9px 16px;letter-spacing:.01em}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.top-row{display:flex;align-items:center;gap:20px;height:72px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-width:0}
+.logo-mark{flex:none;width:40px;height:40px;color:var(--ink)}
+.brand-name{font-weight:800;font-size:1.16rem;line-height:1.1;letter-spacing:-.01em}
+.brand-name small{display:block;font-weight:500;font-size:.66rem;color:var(--ink-soft);letter-spacing:.04em;margin-top:2px;text-transform:uppercase}
+.search{flex:1;max-width:440px;margin-left:auto;position:relative}
+.search input{width:100%;height:44px;border-radius:999px;border:1.5px solid var(--line-strong);background:var(--bg-soft);padding:0 16px 0 42px;outline:none;font-size:.92rem}
+.search input:focus{border-color:var(--accent);background:var(--paper)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--ink-soft)}
+.cart-btn{position:relative;height:44px;min-width:44px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;gap:8px;padding:0 18px;font-weight:700;font-size:.86rem}
+.cart-btn .lbl{display:none}
+.badge{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:50%;background:var(--badge);color:var(--badge-ink);font-size:.68rem;font-weight:800;display:grid;place-items:center;padding:0 4px;border:2px solid var(--paper)}
+.badge[hidden]{display:none}
+.bump{animation:bump .35s ease}
+@keyframes bump{50%{transform:scale(1.3)}}
+
+/* Hero */
+.hero{padding:40px 0}
+.hero-card{background:var(--bg-soft);border-radius:var(--r-lg);padding:40px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.hero h1{font-weight:800;font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.14;letter-spacing:-.02em;margin:0 0 10px;max-width:18ch;text-wrap:balance}
+.hero p{margin:0 0 20px;color:var(--ink-soft);max-width:44ch;font-size:.98rem}
+.hero-cta{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;border-radius:999px;padding:13px 22px;font-weight:700;font-size:.88rem;text-decoration:none;border:0}
+.hero-cta:hover{background:var(--accent)}
+.trustrow{flex:none;display:grid;gap:12px}
+.trust{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:600;color:var(--ink)}
+.trust svg{flex:none;color:var(--accent)}
+
+/* Shop layout: sidebar + grid */
+.shop{padding:8px 0 100px}
+.shop-row{display:flex;gap:34px;align-items:flex-start}
+.filters{flex:none;width:220px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 90px)}
+.filters h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-soft);font-weight:700;margin:0 0 12px}
+.cat-list{display:flex;flex-direction:column;gap:2px}
+.cat-link{display:flex;align-items:center;justify-content:space-between;gap:8px;border:0;background:transparent;text-align:left;padding:9px 10px;border-radius:var(--r-sm);font-weight:600;font-size:.9rem;color:var(--ink-soft)}
+.cat-link .cnt{font-weight:500;font-size:.76rem;color:var(--line-strong)}
+.cat-link[aria-current="true"]{background:var(--accent-soft);color:var(--accent)}
+.cat-link[aria-current="true"] .cnt{color:var(--accent)}
+.cat-link.top-link{color:var(--badge)}
+.cat-link.top-link[aria-current="true"]{background:#FCEAE3;color:var(--badge)}
+.filters-divider{height:1px;background:var(--line);margin:16px 0}
+.sortwrap{margin-top:4px}
+.sortwrap select{width:100%;appearance:none;border:1.5px solid var(--line-strong);background:var(--paper);border-radius:var(--r-sm);padding:9px 30px 9px 12px;font-size:.86rem;font-weight:600;color:var(--ink);outline:none}
+.sortwrap{position:relative}
+.sortwrap svg{position:absolute;right:11px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--ink-soft)}
+.mobile-filters{display:none}
+
+.catalog-col{flex:1;min-width:0}
+.catalog-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.catalog-top h2{font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin:0}
+.catalog-top .n{font-size:.84rem;color:var(--ink-soft);font-weight:500}
+
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+
+/* Home: carousels per category */
+.home-section{padding-bottom:34px}
+.home-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.home-section-head h2{font-size:1.16rem;font-weight:800;letter-spacing:-.01em;margin:0;display:flex;align-items:center;gap:8px}
+.home-section-head h2 .flag{background:var(--badge);color:var(--badge-ink);font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:3px 7px;border-radius:5px}
+.seeall{flex:none;display:inline-flex;align-items:center;gap:5px;border:0;background:transparent;color:var(--accent);font-weight:700;font-size:.84rem;padding:0}
+.carousel-track{display:flex;gap:14px;overflow-x:auto;padding:2px 2px 8px;margin:0 -2px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.carousel-item{flex:0 0 172px;scroll-snap-align:start}
+.carousel-item .card{height:100%}
+.card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;position:relative;transition:box-shadow .15s,border-color .15s}
+.card:hover{box-shadow:var(--shadow-sm);border-color:var(--line-strong)}
+.card.in{border-color:var(--accent);box-shadow:0 0 0 1.5px var(--accent)}
+.thumb{aspect-ratio:1/1;background:var(--mat);display:grid;place-items:center;position:relative;border-bottom:1px solid var(--line);padding:16px;width:100%}
+.thumb img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.thumb .icon-fallback{font-size:.72rem;font-weight:700;color:var(--line-strong);text-align:center;text-transform:uppercase;letter-spacing:.03em}
+.ribbon{position:absolute;top:10px;left:10px;background:var(--badge);color:var(--badge-ink);font-weight:800;font-size:.66rem;text-transform:uppercase;letter-spacing:.03em;padding:5px 9px;border-radius:var(--r-sm)}
+.qty-tag{position:absolute;top:10px;right:10px;background:var(--ink);color:#fff;font-weight:700;font-size:.66rem;padding:5px 9px;border-radius:var(--r-sm)}
+.body{padding:12px 12px 13px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pname{font-weight:700;font-size:.9rem;line-height:1.32;margin:0}
+.pdesc{font-size:.78rem;color:var(--ink-soft);margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-weight:800;font-size:1.08rem;letter-spacing:-.01em;color:var(--ink);margin-top:auto;padding-top:8px}
+.add{border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:.84rem;border-radius:var(--r-sm);height:40px;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:9px}
+.add:hover{background:var(--accent-dark)}
+.stepper{display:flex;align-items:center;justify-content:space-between;background:var(--accent);color:var(--accent-ink);border-radius:var(--r-sm);height:40px;margin-top:9px}
+.stepper button{border:0;background:transparent;color:inherit;width:38px;height:40px;font-size:1.15rem;font-weight:700;display:grid;place-items:center}
+.stepper span{font-weight:700;font-size:.92rem}
+.empty-search{text-align:center;padding:70px 0;color:var(--ink-soft)}
+.empty-search b{display:block;font-weight:800;font-size:1.2rem;color:var(--ink);margin-bottom:6px}
+
+/* Floating bar */
+.bar{position:fixed;left:14px;right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:40;display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 8px 8px 20px;box-shadow:var(--shadow-md);border:0;text-align:left;transform:translateY(160%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.bar.show{transform:none}
+.bar .t{flex:1;line-height:1.2}
+.bar .t small{display:block;opacity:.68;font-size:.72rem;font-weight:600}
+.bar .t strong{font-size:1.15rem;font-weight:800}
+.bar .go{background:var(--accent);color:#fff;border-radius:999px;padding:13px 18px;font-weight:700;font-size:.84rem}
+
+/* Drawer */
+.scrim{position:fixed;inset:0;background:rgba(14,16,14,.45);z-index:50;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;z-index:60;background:var(--paper);display:flex;flex-direction:column;box-shadow:var(--shadow-md);left:0;right:0;bottom:0;max-height:92%;border-radius:var(--r-lg) var(--r-lg) 0 0;transform:translateY(100%);transition:transform .32s cubic-bezier(.2,.8,.2,1);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.open{transform:none}
+.d-head{display:flex;align-items:center;gap:10px;padding:18px 20px 14px;border-bottom:1px solid var(--line)}
+.d-head h2{font-weight:800;font-size:1.16rem;margin:0;flex:1;letter-spacing:-.01em}
+.back,.close{border:1px solid var(--line);background:var(--bg-soft);width:36px;height:36px;border-radius:50%;display:grid;place-items:center}
+.back[hidden]{display:none}
+.d-body{overflow-y:auto;padding:6px 20px 18px;flex:1}
+.d-foot{border-top:1px solid var(--line);padding:16px 20px 18px;display:flex;flex-direction:column;gap:12px;background:var(--paper)}
+.sum{display:flex;justify-content:space-between;align-items:baseline}
+.sum span{font-size:.8rem;color:var(--ink-soft);font-weight:600}
+.sum strong{font-size:1.4rem;font-weight:800;letter-spacing:-.01em}
+.note{font-size:.79rem;color:var(--ink-soft);margin:0}
+.primary{border:0;background:var(--accent);color:#fff;border-radius:999px;height:52px;font-weight:700;font-size:.92rem;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;width:100%}
+.primary:hover{background:var(--accent-dark)}
+.primary.wa{background:var(--whatsapp)}
+.primary.wa:hover{background:#189946}
+.primary[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.line-item{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.li-img{width:56px;height:56px;border-radius:var(--r-sm);background:var(--mat);display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);padding:6px}
+.li-img img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.li-img .icon-fallback{font-size:.5rem;font-weight:700;color:var(--line-strong);text-align:center}
+.li-name{font-weight:700;font-size:.88rem;line-height:1.3}
+.li-sub{font-size:.79rem;color:var(--ink-soft)}
+.li-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.li-right .stepper{height:32px}
+.li-right .stepper button{width:30px;height:32px}
+.remove{border:0;background:none;color:var(--badge);font-size:.76rem;font-weight:700;padding:0}
+.empty-cart{text-align:center;padding:52px 10px;color:var(--ink-soft)}
+.empty-cart svg{width:44px;height:44px;color:var(--line-strong)}
+.empty-cart b{display:block;color:var(--ink);font-weight:800;font-size:1.12rem;margin:10px 0 4px}
+
+/* Form */
+.form{display:flex;flex-direction:column;gap:14px;padding-top:12px}
+.field label,.legend{display:block;font-weight:700;font-size:.82rem;margin-bottom:6px}
+.field input,.field textarea{width:100%;border:1.5px solid var(--line-strong);background:var(--bg-soft);border-radius:var(--r-sm);padding:12px 13px;outline:none}
+.field textarea{resize:vertical;min-height:80px}
+.field input:focus,.field textarea:focus{border-color:var(--accent);background:var(--paper)}
+.field.err input{border-color:var(--badge)}
+.err-msg{color:var(--badge);font-size:.78rem;margin-top:4px;display:none}
+.field.err .err-msg{display:block}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0}
+.opt span{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--line-strong);border-radius:var(--r-sm);padding:11px 12px;font-weight:700;font-size:.84rem}
+.opt input:checked+span{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.opt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 96px;gap:12px}
+[hidden]{display:none !important}
+.recap{background:var(--bg-soft);border-radius:var(--r-md);padding:12px 14px;font-size:.86rem}
+.recap div{display:flex;justify-content:space-between;gap:10px}
+
+footer{border-top:1px solid var(--line);padding:32px 0 100px;color:var(--ink-soft);font-size:.86rem;background:var(--bg-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a{color:var(--accent);font-weight:700;text-decoration:none}
+
+@media (min-width:640px){
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .cart-btn .lbl{display:inline}
+  .carousel-item{flex-basis:200px}
+}
+@media (min-width:900px){
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .carousel-item{flex-basis:216px}
+  .bar{left:auto;right:24px;width:380px}
+  .drawer{left:auto;top:0;bottom:0;width:440px;max-height:none;border-radius:0;transform:translateX(100%);padding-top:env(safe-area-inset-top,0px)}
+  footer{padding-bottom:32px}
+}
+@media (max-width:899px){
+  .shop-row{flex-direction:column}
+  .filters{position:static;width:100%;top:auto}
+  .cat-list{flex-direction:row;overflow-x:auto;gap:8px;scrollbar-width:none;padding-bottom:2px}
+  .cat-list::-webkit-scrollbar{display:none}
+  .cat-link{flex:none;border:1.5px solid var(--line-strong);white-space:nowrap}
+  .cat-link .cnt{display:none}
+  .filters h3{display:none}
+  .filters-divider{display:none}
+  .sortwrap{max-width:220px;margin-top:12px}
+}
+@media (max-width:520px){
+  .top-row{flex-wrap:wrap;height:auto;padding:10px 0;row-gap:10px}
+  .search{order:3;flex-basis:100%;max-width:none}
+  .hero-card{padding:28px 22px}
+  .trustrow{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">🚚 Entrega em Araçariguama e região · Pedido fechado direto pelo WhatsApp</div>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#inicio" aria-label="Casa Limpeza Criativa, início">
+      <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="30.5" stroke="currentColor" stroke-width="1"/>
+        <circle cx="32" cy="32" r="25.5" stroke="currentColor" stroke-width=".5"/>
+        <path id="clcArc" d="M 12.5,45.5 A 23,23 0 0 1 51.5,45.5" fill="none" stroke="none"/>
+        <text font-family="Plus Jakarta Sans, sans-serif" font-size="4.8" font-weight="700" letter-spacing="1.4" fill="currentColor">
+          <textPath href="#clcArc" startOffset="50%" text-anchor="middle">ARAÇARIGUAMA</textPath>
+        </text>
+        <path d="M19 30 L32 19 L45 30" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.5 29 V41 H41.5 V29" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28.5 41 V33 H35.5 V41" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M38 18.5c2.6 3 2.6 5.6 0 7.8-2.6-2.2-2.6-4.8 0-7.8z" fill="currentColor"/>
+      </svg>
+      <span class="brand-name">Casa Limpeza Criativa<small>Produtos &amp; insumos</small></span>
+    </a>
+    <div class="search" role="search">
+      <label class="sr" for="q">Buscar produto</label>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar produto" autocomplete="off">
+    </div>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrinho">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+      <span class="lbl">Carrinho</span>
+      <span class="badge" id="badge" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero wrap" id="inicio">
+  <div class="hero-card">
+    <div>
+      <h1>Tudo para deixar a casa brilhando</h1>
+      <p>Escolha os produtos, confira o total no carrinho e envie o pedido pronto pelo WhatsApp. A gente confirma e combina a entrega com você.</p>
+      <a href="#loja" class="hero-cta">Ver catálogo completo
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="trustrow">
+      <span class="trust"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="13" height="7" rx="1"/><path d="M16 12h3l2 3v2h-5z"/><circle cx="7.5" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>Entrega ou retirada</span>
+      <span class="trust"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>Pix, cartão ou dinheiro</span>
+      <span class="trust"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.6 8.6 0 0 1-3.6-.8L3 20l1-5a8.4 8.4 0 1 1 17-3.5z"/></svg>Pedido pelo WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<section class="shop wrap" id="loja">
+  <div class="shop-row">
+    <aside class="filters">
+      <h3>Categorias</h3>
+      <div class="cat-list" id="cats"></div>
+      <div class="filters-divider"></div>
+      <h3>Ordenar</h3>
+      <div class="sortwrap">
+        <label class="sr" for="sort">Ordenar por</label>
+        <select id="sort">
+          <option value="rel">Relevância</option>
+          <option value="top">Mais vendidos</option>
+          <option value="asc">Menor preço</option>
+          <option value="desc">Maior preço</option>
+          <option value="az">Nome A–Z</option>
+        </select>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </aside>
+    <div class="catalog-col" id="catalog"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Casa Limpeza Criativa · Araçariguama, SP</span>
+    <a href="https://wa.me/5511958334363" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</footer>
+
+<button class="bar" id="bar" aria-label="Ver carrinho">
+  <span class="t"><small id="barCount">0 itens</small><strong id="barTotal">R$ 0,00</strong></span>
+  <span class="go">Ver carrinho</span>
+</button>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
+  <div class="d-head">
+    <button class="back" id="back" aria-label="Voltar ao carrinho" hidden>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <h2 id="dTitle">Seu carrinho</h2>
+    <button class="close" id="close" aria-label="Fechar">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="d-body">
+    <div id="stepCart"><div id="items"></div></div>
+
+    <form class="form" id="stepForm" hidden novalidate>
+      <div class="field" id="fNome">
+        <label for="nome">Seu nome</label>
+        <input id="nome" autocomplete="name" placeholder="Como devemos te chamar?">
+        <div class="err-msg">Informe seu nome.</div>
+      </div>
+      <div class="field" id="fTel">
+        <label for="tel">WhatsApp para contato</label>
+        <input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000">
+        <div class="err-msg">Informe um telefone com DDD.</div>
+      </div>
+
+      <div>
+        <span class="legend">Como quer receber?</span>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="mod" value="Entrega" checked><span>Entrega</span></label>
+          <label class="opt"><input type="radio" name="mod" value="Retirada"><span>Retirar</span></label>
+        </div>
+      </div>
+
+      <div id="addr">
+        <div class="row2">
+          <div class="field" id="fRua">
+            <label for="rua">Rua</label>
+            <input id="rua" autocomplete="address-line1" placeholder="Rua / avenida">
+            <div class="err-msg">Informe a rua.</div>
+          </div>
+          <div class="field" id="fNum">
+            <label for="num">Número</label>
+            <input id="num" inputmode="numeric" placeholder="Nº">
+            <div class="err-msg">Nº</div>
+          </div>
+        </div>
+        <div class="field" style="margin-top:14px" id="fBairro">
+          <label for="bairro">Bairro</label>
+          <input id="bairro" placeholder="Bairro">
+          <div class="err-msg">Informe o bairro.</div>
+        </div>
+        <div class="field" style="margin-top:14px">
+          <label for="comp">Complemento ou referência (opcional)</label>
+          <input id="comp" placeholder="Casa 2, perto do mercado…">
+        </div>
+      </div>
+
+      <div>
+        <span class="legend">Forma de pagamento</span>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="pag" value="Pix" checked><span>Pix</span></label>
+          <label class="opt"><input type="radio" name="pag" value="Cartão"><span>Cartão</span></label>
+          <label class="opt"><input type="radio" name="pag" value="Dinheiro"><span>Dinheiro</span></label>
+        </div>
+      </div>
+      <div class="field" id="troco" hidden>
+        <label for="trocoV">Troco para quanto? (opcional)</label>
+        <input id="trocoV" inputmode="decimal" placeholder="Ex.: 100">
+      </div>
+
+      <div class="field">
+        <label for="obs">Observação (opcional)</label>
+        <textarea id="obs" placeholder="Alguma fragrância preferida, horário para entregar…"></textarea>
+      </div>
+      <div class="recap" id="recap"></div>
+    </form>
+  </div>
+
+  <div class="d-foot" id="dFoot">
+    <div class="sum"><span>Total dos produtos</span><strong id="total">R$ 0,00</strong></div>
+    <p class="note" id="feeNote">A taxa de entrega, se houver, é combinada no WhatsApp.</p>
+    <button class="primary" id="toForm">Continuar</button>
+    <a class="primary wa" id="send" href="#" target="_blank" rel="noopener" hidden>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Enviar pedido pelo WhatsApp
+    </a>
+  </div>
+</aside>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO DA LOJA
+   ========================================================= */
+const WHATSAPP = "5511958334363";
+const LOJA = "Casa Limpeza Criativa";
+
+/* Categorias (na ordem em que aparecem) */
+const CATEGORIAS = [{"id":"cozinha","nome":"Cozinha"},{"id":"banheiro","nome":"Banheiro"},{"id":"lavanderia","nome":"Lavanderia"},{"id":"casa","nome":"Casa toda"},{"id":"aromas","nome":"Aromas"},{"id":"panos","nome":"Panos"},{"id":"pets","nome":"Ambientes com Pets"},{"id":"decoracao","nome":"Decoração"},{"id":"utensilios","nome":"Utensílios"},{"id":"obra","nome":"Insumos de Marmoraria/Obra"},{"id":"automotivo","nome":"Automotivo"},{"id":"pessoal","nome":"Uso Pessoal"}];
+
+/* Produtos
+   - img: deixe "" para usar o marcador da categoria, ou coloque o caminho da foto
+   - preco: número em reais (use ponto: 12.90)
+   - top: true marca como "mais vendido" */
+const PRODUTOS = [{"id":"p0","cat":"cozinha","nome":"Desengordurante Air Fryer 500ml","preco":19.99,"desc":"Você só precisa dar um show nas receitas, a limpeza fica todinha com ele! ✨Com fórmula exclusiva o BYTS Limpa Air Fryer quebra com facilidade as moléculas de...","img":"img/p0.jpg","top":false},{"id":"p1","cat":"cozinha","nome":"Limpa Inox Deoline 750Ml","preco":19.99,"desc":"✨ Deo Line Limpa Inox – Muito mais brilho sem esforço!Dê adeus às marcas de dedos e manchas nos seus eletrodomésticos! O Limpa Inox Deo Line é ideal para...","img":"img/p1.jpg","top":true},{"id":"p2","cat":"cozinha","nome":"Desengordurante 1L","preco":9.99,"desc":"Point✨ Desengordurante Point – Poder máximo contra a gordura!Chega de esforço na hora da limpeza! O Desengordurante Point é o seu aliado perfeito para remover...","img":"img/p2.jpg","top":true},{"id":"p3","cat":"cozinha","nome":"Multi Uso Limão","preco":9.99,"desc":"O multiuso é um produto versátil e pode ser utilizado para remover sujeira de letrodomésticos, azulejos e materiais plásticos. No entanto, deve-se evitar o...","img":"img/p3.jpg","top":true},{"id":"p4","cat":"cozinha","nome":"✨ Pingo Mágico Original ✨","preco":24.99,"desc":"O poderoso Pingo Mágico Original é o flotador multiuso que revoluciona sua forma de limpar! Com ação instantânea, ele flutua a sujeira, facilitando a remoção de...","img":"img/p4.jpg","top":false},{"id":"p5","cat":"cozinha","nome":"Limpa Gordura Pesada Concentrado 1l","preco":39.99,"desc":"LIMPA GORDURA – detergente desengordurante com alto poder de limpeza. Remove sujidades orgânicas e manchas de água. Indicado para: boxes, vidros, metais,...","img":"img/p5.jpg","top":false},{"id":"p6","cat":"cozinha","nome":"Limpador De Grelha Concentrado Etaniz","preco":39.99,"desc":"🔥 Grelha Suja? Nunca Mais!O Limpador de Grelha Etaniz foi feito pra quem leva o churrasco a sério!Remove gordura, fuligem e sujeiras difíceis com facilidade...","img":"img/p6.jpg","top":false},{"id":"p7","cat":"cozinha","nome":"🍋 Detergente Limão Point","preco":12,"desc":"🧽 Brilho e limpeza impecável🍋 Fragrância refrescante de limão💧 Rende muito mais com pouca quantidade📦 Disponível em embalagens de 2L e 5L – ideal para o...","img":"img/p7.jpg","top":true},{"id":"p8","cat":"cozinha","nome":"Limpa Aluminio Point","preco":14.99,"desc":"Com o Limpa Alumínio Point, suas panelas ficam limpas e brilhando sem esforço! Fórmula potente que remove manchas, gordura e sujeiras difíceis em segundos.🔹...","img":"img/p8.jpg","top":false},{"id":"p9","cat":"cozinha","nome":"Detergente Maça","preco":10.99,"desc":"O Lava Louças Maçã trás o frescor e a suavidade com cheirinho suave, econômico e fácil de usar. Com fórmula potente, o detergente remove gordura e sujeira de...","img":"img/p9.jpg","top":true},{"id":"p10","cat":"cozinha","nome":"Detergente Clean","preco":29.9,"desc":"O Detergente Clear Point é a escolha perfeita para uma limpeza eficaz e econômica. Desenvolvido com uma fórmula balanceada, ele remove com facilidade...","img":"img/p10.jpg","top":false},{"id":"p11","cat":"cozinha","nome":"Lava Loucas Detergente Neutro Da Point Clean","preco":29.9,"desc":"Lava Louças Detergente Neutro da Point Clean🍽️✨ Diga adeus à sujeira com o Lava Louças Detergente Neutro da Point Clean! Fórmula poderosa que remove até as manchas mais difíceis, deixando suas louças...","img":"img/p11.jpg","top":false},{"id":"p12","cat":"cozinha","nome":"Multiação Citrus Point","preco":12.99,"desc":"🧼💥 Quando o Multiação Citrus Point entra em ação… até a faxina vira festa!Cheiro cítrico, limpeza poderosa e aquele toque de frescor que transforma qualquer...","img":"img/p12.jpg","top":false},{"id":"p13","cat":"cozinha","nome":"Supergreen® MultiRestaurador","preco":24.99,"desc":"O Supergreen® MultiRestaurador devolve o brilho de uma forma que deixa peças em inox, prata e outros metais não ferrosos como novos! Também recupera pintura...","img":"img/p13.jpg","top":false},{"id":"p14","cat":"cozinha","nome":"🧼 Pasta Facilit 380g – Limpeza A Seco Com Acao Desengordurante","preco":9.9,"desc":"🧼 Pasta Facilít 380g – Limpeza à Seco com Ação DesengorduranteA Pasta Facilít é perfeita para remover sujeiras difíceis e gorduras em diversas superfícies. Sua fórmula desengordurante é eficaz e rápida, ideal para...","img":"img/p14.jpg","top":false},{"id":"p15","cat":"cozinha","nome":"Sabão em Pasta Cristal Rosa","preco":9.99,"desc":"Finalidade: Indicado para limpeza pesada, sendo altamente eficaz na remoção de gordura impregnada e graxa de panelas, fogões, grelhas e coifas. Ação 3 em 1:...","img":"img/p15.jpg","top":false},{"id":"p16","cat":"cozinha","nome":"Sabão em Pasta Tradicional Urca","preco":12,"desc":"Finalidade: Ideal para desengordurar e dar brilho a panelas, talheres e utensílios de cozinha. Fórmula: Contém tensoativo biodegradável e pasta de arroz, sendo...","img":"img/p16.jpg","top":false},{"id":"p17","cat":"cozinha","nome":"Limpa Grill","preco":39.99,"desc":"Indicado para a limpeza de fogões, fornos, chapas, fritadeiras, coifas, grelhas, churrasqueiras e azulejos. É a escolha ideal para restaurantes, cozinhas...","img":"img/p17.jpg","top":false},{"id":"p18","cat":"cozinha","nome":"Limpa Fogão","preco":19.99,"desc":"Remove gorduras, restos de alimentos e fuligens acumuladas em superfícies de cocção. Ele desintegra a sujeira pesada sem exigir esforço mecânico excessivo,...","img":"img/p18.jpg","top":false},{"id":"p19","cat":"cozinha","nome":"Degreaser","preco":19.99,"desc":"Remove gorduras carbonizadas, óleos, graxas e sujeiras pesadas que parecem impossíveis de limpar. Age rapidamente em chapas, fogões e coifas, tornando o...","img":"img/p19.jpg","top":false},{"id":"p20","cat":"cozinha","nome":"Spray Desengordurante Super Dom Para Limpeza De Air Fryer","preco":29.99,"desc":"Conteúdo: Frasco aerossol com 250ml de produto. Função: Desenvolvido para dissolver gorduras incrustadas e remover sujeiras difíceis da fritadeira elétrica....","img":"img/p20.jpg","top":false},{"id":"p21","cat":"cozinha","nome":"Esponja Inox","preco":4.99,"desc":"é indicada para limpeza de louças com gordura queimada ou incrustações pesadas, que são difíceis de ser removidas com a esponja de louças...","img":"img/p21.jpg","top":true},{"id":"p22","cat":"banheiro","nome":"🌸Aromatizante Slp Point – Fragrancia Rosa","preco":12.99,"desc":"🌸Aromatizante SLP Point – Fragrância RosaTransforme o ambiente com um perfume suave e marcante! O SLP Point é ideal para perfumar casas, escritórios, lojas, banheiros e muito mais. Sua fórmula garante...","img":"img/p22.jpg","top":false},{"id":"p23","cat":"banheiro","nome":"Sabonete Liquido Capim Limao Yantra","preco":19.99,"desc":"Sabonete Líquido Capim Limão YantraUso: Higiene pessoal, indicado para mãos e corpo.Características: Fórmula com alto poder de emoliência e espuma agradável.","img":"img/p23.jpg","top":true},{"id":"p24","cat":"banheiro","nome":"Casa Clean Banheiro Total Com Cloro Ativo","preco":29.99,"desc":"🚿✨ Banheiro limpo e perfumado com o poder do Cloro Ativo!Chega de mofo, sujeira e aquele cheirinho desagradável!Com o Casa Clean Banheiro Total, você...","img":"img/p24.jpg","top":false},{"id":"p25","cat":"banheiro","nome":"Etaniz Limpa Sanitarios Concentrado 1l","preco":39.99,"desc":"Etaniz Limpa Sanitários Concentrado 1L🚽✨ Etaniz Limpa Sanitários – Poder que brilha na faxina!Produto concentrado ideal para banheiros, pias, ralos e vasos sanitários.Com fórmula potente, o...","img":"img/p25.jpg","top":false},{"id":"p26","cat":"banheiro","nome":"Agua Sanitaria Point – 5 Litros Multiplo Uso | Cloro Ativo","preco":19.99,"desc":"Água Sanitária Point – 5 Litros Múltiplo uso | Cloro AtivoA solução ideal para limpeza profunda no seu dia a dia!A Água Sanitária Point é eficaz na desinfecção de superfícies, branqueamento de roupas e eliminação de...","img":"img/p26.jpg","top":true},{"id":"p27","cat":"banheiro","nome":"Cloro Gel Point","preco":19.99,"desc":"Quer deixar seu banheiro brilhando e livre de germes? Conheça o Cloro Gel da Point Clean!Remove sujeiras resistentes de diversas superfícies, como manchas...","img":"img/p27.jpg","top":true},{"id":"p28","cat":"banheiro","nome":"Papel Higienico Institucional Conceito Papeis – 100% Celulose","preco":69.99,"desc":"Papel Higiênico Institucional Conceito Papéis – 100% CeluloseOfereça mais conforto, economia e sustentabilidade para o seu ambiente com o Papel Higiênico Conceito Papéis. Produzido com 100% celulose virgem e fibras...","img":"img/p28.jpg","top":true},{"id":"p29","cat":"banheiro","nome":"Deo Line Limpa Box","preco":19.99,"desc":"O Deo Line Limpa Box é a solução prática e eficiente para deixar espelhos, vidros e azulejos impecáveis. Sua fórmula poderosa age rapidamente, removendo...","img":"img/p29.jpg","top":false},{"id":"p30","cat":"banheiro","nome":"Vasix","preco":29.99,"desc":"Desincrustante de alta performance para remoção decrostas, encardidos e incrustações em vasos sanitários.Produto pronto para uso.Remover a água excedente no...","img":"img/p30.jpg","top":false},{"id":"p31","cat":"banheiro","nome":"Cloro Gel","preco":19.99,"desc":"Diferencial: Possui alto rendimento e excelente aderência. Por ser um gel, evita desperdícios e respingos indesejados, oferecendo muito mais controle durante a...","img":"img/p31.jpg","top":false},{"id":"p32","cat":"banheiro","nome":"Desinfetante Accept Lavanda 500ml Pinho Bril","preco":19.99,"desc":"Ação desinfetante: elimina germes e bactériasPerfume de lavanda que deixa sensação de frescor e limpezaIndicado para sanitários, pisos, azulejos e superfícies...","img":"img/p32.jpg","top":true},{"id":"p33","cat":"banheiro","nome":"Limpador Sanitario Pinho Bril Accept Power 500ml Bombril","preco":19.99,"desc":"Limpador Sanitário Pinho Bril Accept Power 500ml BombrilIncline o frasco direcionando o bico sob a borda interna do vaso sanitário e distribua o produto de maneira a formar uma película que cubra toda a sua volta....","img":"img/p33.jpg","top":true},{"id":"p34","cat":"banheiro","nome":"Bloco para Caixa Acoplada","preco":39.99,"desc":"Disponível nos aromas Floral, Lavanda ou Marine.","img":"","top":false},{"id":"p35","cat":"banheiro","nome":"Spray Limpador De Uso Geral Para Box E Banheiro","preco":29.99,"desc":"Ação: Remove oleosidade, resíduos de sabonete, gordura corporal e pasta de dente.Característica: Fórmula em spray que facilita a aplicação e proporciona...","img":"img/p35.jpg","top":false},{"id":"p36","cat":"banheiro","nome":"Kit Limpeza de Vãos Ákora","preco":19.99,"desc":"Limpeza de vãos em box de vidroLimpeza de locais de difícil acessoLimpa utilizando apenas águaNão deixa fiaposFácil de usar LavávelUtilizar sabão...","img":"img/p36.jpg","top":false},{"id":"p37","cat":"lavanderia","nome":"🧼 Sabao Em Barra Espumais Coco 100g – Para Roupas Finas Delicadas","preco":1.99,"desc":"🧼 Sabão em Barra Espumais Coco 100g – Para Roupas Finas & DelicadasCuide das suas roupas com carinho e eficácia com o sabão em barra Espumais de Coco. Sua fórmula suave e perfumada foi especialmente desenvolvida para li…","img":"img/p37.jpg","top":false},{"id":"p38","cat":"lavanderia","nome":"✨ Semorin White 3 Em 1 – Alvejante Sem Cloro + Tira Manchas Com Oxy Po","preco":19.99,"desc":"🧺 Benefícios que fazem a diferença:✅ 3 em 1: tira manchas, alveja e pré-lava✅ Sem cloro: cuida das roupas e da sua saúde✅ Eficaz até nas manchas mais...","img":"img/p38.jpg","top":false},{"id":"p39","cat":"lavanderia","nome":"👕✨ Semorin Alvejante Sem Cloro","preco":12.99,"desc":"🌟 Indicado para roupas brancas💧 Remove manchas com segurança🌀 Fórmula sem gel – fácil diluição✅ Não danifica os tecidos♻️ Embalagem refil econômica com...","img":"img/p39.jpg","top":false},{"id":"p40","cat":"lavanderia","nome":"🌀✨ Semorin Oxypower 3 Em 1 – Alvejante E Tira Manchas 400g","preco":19.99,"desc":"O Semorin OxyPower é o seu aliado na hora da lavanderia! Com fórmula poderosa 3 em 1, ele tira manchas, alveja e atua como pré-lavagem, deixando suas roupas...","img":"img/p40.jpg","top":false},{"id":"p41","cat":"lavanderia","nome":"🧼 Semorin Oxy Power – Alvejante Sem Cloro Para Roupas Coloridas","preco":12.99,"desc":"✨ Remove manchas sem desbotar🟡 Ideal para roupas coloridas💧 Fórmula segura para uso diário♻️ Embalagem refil econômica e sustentável🧴 500ml de poder...","img":"img/p41.jpg","top":false},{"id":"p42","cat":"lavanderia","nome":"🧺 Alvejante Sem Cloro Point – 2 Litros","preco":12.99,"desc":"Diga adeus às manchas sem se preocupar com o desbotamento!O Alvejante Sem Cloro Point foi desenvolvido para limpar profundamente, realçar os brancos e cuidar...","img":"img/p42.jpg","top":false},{"id":"p43","cat":"lavanderia","nome":"Amaciante Barbarex Le Blue","preco":19.99,"desc":"Amaciante Concentrado Barbarex – Fragrância marcante, cuidado intenso e menos impacto no planeta!Descubra o segredo por trás de roupas macias, perfumadas e...","img":"img/p43.jpg","top":true},{"id":"p44","cat":"lavanderia","nome":"Amacisoft Downy Point","preco":12.99,"desc":"🧺✨ Roupa cheirosa de verdade? É com o Amacisoft Point!Com fórmula concentrada e perfume duradouro, ele amacia, perfuma e cuida das suas roupas com o carinho...","img":"img/p44.jpg","top":false},{"id":"p45","cat":"lavanderia","nome":"Lava Roupa Liquido 🥥","preco":12.99,"desc":"Feito com ingredientes de alta qualidade, nosso produto garante a limpeza profunda das suas roupas, preservando as fibras e mantendo a maciez e o frescor do...","img":"img/p45.jpg","top":false},{"id":"p46","cat":"lavanderia","nome":"Amaciultra Downy Point","preco":12.99,"desc":"O Amaciultra Point vai deixar suas roupas tão macias e cheirosas que vai dar vontade de abraçar o varal! 😍👕💧 Econômico • 🧺 Rende muito • 👶 Agradável até...","img":"img/p46.jpg","top":false},{"id":"p47","cat":"lavanderia","nome":"Lava Roupas Líquido Point Soft","preco":12.99,"desc":"👕✨ Roupas limpas, cheirosas e com muito mais praticidade!O Lava Roupas Líquido Point Soft garante alta performance na remoção de sujeiras com uma fórmula...","img":"img/p47.jpg","top":false},{"id":"p48","cat":"lavanderia","nome":"Amaciante Point Amacisoft","preco":39.99,"desc":"👕✨ Diga adeus às roupas amassadas e sem perfume!Com o Amaciante Point Amacisoft e um simples pulverizador com água, você cria a misturinha perfeita para...","img":"img/p48.jpg","top":false},{"id":"p49","cat":"lavanderia","nome":"Sabao Em Po Omo Lavagem Perfeita 1,6kg","preco":27.99,"desc":"Sabão em Pó Omo Lavagem Perfeita 1,6kgAlém da limpeza imbatível, o Sabão em Pó Omo Lavagem Perfeita 1,6kg, proporciona zero danos de resíduos de sabão nas roupas e ainda se preocupa com o meio...","img":"img/p49.jpg","top":true},{"id":"p50","cat":"lavanderia","nome":"Bicarbonato Assim Triplação","preco":14.99,"desc":"Poder Triplação: Foca na remoção de manchas, ação anti-resíduos e cuidado com os tecidos.Ação do Bicarbonato: Ingrediente ativo que auxilia na limpeza profunda...","img":"img/p50.jpg","top":false},{"id":"p51","cat":"lavanderia","nome":"Alvejante sem Cloro Barbarex","preco":17.99,"desc":"3x1Tira manchasRoupas Brancas e coloridasNão danifica o tecido02 Oxigênio Ativo…","img":"img/p51.jpg","top":true},{"id":"p52","cat":"casa","nome":"Maridão","preco":19.99,"desc":"Eliminador de visita de cachorro gato Limpa vidros box portas e janelasLimpa geladeira forno micro ondas etc…","img":"img/p52.jpg","top":false},{"id":"p53","cat":"casa","nome":"Removedor Desincrustante Flotador Limpa Tudo Pesado Profissional Bar","preco":39.99,"desc":"Removedor Desincrustante Flotador Limpa Tudo Pesado Profissional - BARMultiuso. Pode ser usado desde o motor do carro até o sofá da sala e o rejunte da cozinha. Casa: Sofás, colchões, tapetes, rejuntes, paredes, vidros e…","img":"img/p53.jpg","top":false},{"id":"p54","cat":"casa","nome":"Flotador","preco":29.99,"desc":"Pode ser aplicado em praticamente tudo: paredes, pisos, armários, MDF, plásticos, couros, vinis, carpetes, estofados, azulejos, fogões, geladeiras e divisórias....","img":"img/p54.jpg","top":false},{"id":"p55","cat":"casa","nome":"Limpa Vidros com Protetor","preco":29.99,"desc":"O que ele resolve: Elimina marcas de dedos, gordura, poeira e fuligem sem deixar rastros ou manchas. A proteção integrada evita que a sujeira grude com...","img":"img/p55.jpg","top":true},{"id":"p56","cat":"casa","nome":"Tenso Multilimpador","preco":29.99,"desc":"Tenso é Multilimpador indicado para limpeza sob pulverização e sem enxague para todos os tipos de superfícies, é eficiente através de simples pulverização como...","img":"img/p56.jpg","top":false},{"id":"p57","cat":"casa","nome":"Casa Clean Lavanda – Frescor 910ml","preco":19.99,"desc":"🌿💜 Casa Clean Lavanda – Frescor e Higiene em um só produto!Sua casa limpa, perfumada e protegida com um toque suave de lavanda!✅ Contém Álcool – limpeza...","img":"img/p57.jpg","top":false},{"id":"p58","cat":"casa","nome":"Limpador Segredos Da Natureza Capim Limao Energia Do Campo 500ml Cop","preco":19.99,"desc":"Limpador Segredos da Natureza Capim Limão - Energia do Campo 500ml CopÁlcool Líquido: Energia do campoPerfumação por até 30 horasBrilho e acabamento impecávelPrático e sem desperdícioSecagem rápidaLimpa mais de 20...","img":"img/p58.jpg","top":false},{"id":"p59","cat":"casa","nome":"Alcool Liquido Zulu +Bicarbonato Flor De Cacto 1l","preco":19.99,"desc":"Álcool Líquido Zulu +Bicarbonato Flor de Cacto 1lLimpa e higieniza superfícies, deixando fragrância agradável e protegendo contra germes.Composição: Álcool Etílico, bicarbonato de sódio, coadjuvante, lauril...","img":"img/p59.jpg","top":false},{"id":"p60","cat":"casa","nome":"Limpador De Uso Geral 1l Cha Branco","preco":19.99,"desc":"Limpador de Uso Geral 1l Chá BrancoFragrância: Chá brancoUnidades por kit: 1Conteúdo neto: 1 LPeso líquido: 1 kgÁreas de uso recomendadas: uso geral, áreas domésticas e comerciais.Vendido em...","img":"img/p60.jpg","top":false},{"id":"p61","cat":"aromas","nome":"🍋🌿 Limpador Perfumado Coala Citronela 120ml","preco":14.99,"desc":"🔸 Aroma refrescante de citronela🔸 Ajuda a repelir insetos🔸 Alta concentração – rende muito🔸 Perfeito para áreas internas e externas🔸 Tradição desde...","img":"img/p61.jpg","top":false},{"id":"p62","cat":"aromas","nome":"Coala Orquidea Negra Limpador Perfumado","preco":14.99,"desc":"Coala Orquídea Negra Limpador PerfumadoAlém de poder ser usada em todos os ambientes, a Coala Essências - Limpador Perfumado de Ambientes Orquídea Negra também:- Garante a sensação prolongada de...","img":"img/p62.jpg","top":false},{"id":"p63","cat":"aromas","nome":"Limpador Perfumado Flor De Cacto Coala","preco":14.99,"desc":"Diluir 8 gotas do Limpador perfumado de ambientes em 1 litro de água e com o pano úmido passar sobre a superfície desejada.","img":"img/p63.jpg","top":false},{"id":"p64","cat":"aromas","nome":"Difusor De Aromas Coala","preco":19.99,"desc":"Como usar:- Retire a tampa do frasco com cuidado.- Coloque as varetas no líquido perfumado.- Aguarde alguns minutos para que o aroma comece a se espalhar...","img":"img/p64.jpg","top":false},{"id":"p65","cat":"aromas","nome":"Essenciale Linha Premium De Aromatizantes","preco":29.99,"desc":"Essenciale Linha Premium de AromatizantesTransforme seu ambiente com fragrâncias exclusivas que trazem frescor e aconchego em cada borrifada. 🏡💫 Sua casa merece esse toque de sofisticação e...","img":"img/p65.jpg","top":false},{"id":"p66","cat":"aromas","nome":"Limpador Perfumado Talco Da Point Clean","preco":9.99,"desc":"🧼✨ Conheça o Limpador Perfumado Talco da Point Clean! Limpeza impecável com aquele cheirinho suave e aconchegante que só o talco pode proporcionar. Sua casa...","img":"img/p66.jpg","top":true},{"id":"p67","cat":"aromas","nome":"Limpador Perfumado Point Top Flor","preco":9.99,"desc":"Limpador Perfumado Point - Top FlorO Limpador Perfumado Point - Top Flor une limpeza eficiente com um aroma floral marcante que transforma qualquer ambiente.🧼 Ideal para pisos, azulejos e...","img":"img/p67.jpg","top":false},{"id":"p68","cat":"aromas","nome":"Limpador Perfumado Point – Sensatez","preco":9.99,"desc":"🌸 Perfume que encanta, limpeza que impressiona!O Limpador Perfumado Point – Sensatez traz um toque sofisticado e duradouro para sua casa. Com alto poder de...","img":"img/p68.jpg","top":false},{"id":"p69","cat":"aromas","nome":"FLOR DE CEREIJA","preco":29.99,"desc":"ÁGUA PERFUMADASABONETE LIQUIDOAROMATIZADOS DE AMBIENTESHOME SPRAY…","img":"img/p69.jpg","top":false},{"id":"p70","cat":"aromas","nome":"CASCA E FOLHAS","preco":29.99,"desc":"ÁGUA PERFUMADASABONETE LIQUIDOAROMATIZADOS DE AMBIENTESHOME SPRAY…","img":"img/p70.jpg","top":false},{"id":"p71","cat":"aromas","nome":"PITANGA PRETA","preco":29.99,"desc":"ÁGUA PERFUMADASABONETE LIQUIDOAROMATIZADOS DE AMBIENTESHOME SPRAY…","img":"img/p71.jpg","top":false},{"id":"p72","cat":"aromas","nome":"Difusor de Ambientes + REFIL","preco":59.99,"desc":"Utiliza varetas de algodão de alta absorção, que garantem uma dispersão muito mais eficiente e contínua do que as varetas de madeira. O algodão permite que as...","img":"img/p72.jpg","top":false},{"id":"p73","cat":"aromas","nome":"Air Fresh spray","preco":39.99,"desc":"Neutraliza odores indesejados instantaneamente e perfuma com notas verdes e frescas que transmitem sofisticação e harmonia.","img":"img/p73.jpg","top":false},{"id":"p74","cat":"aromas","nome":"Óleo Perfumado Point","preco":12,"desc":"Capim limãoEucalipitoCintronelacasa limpaLavandaDoçuraCravo e Canela…","img":"img/p74.jpg","top":false},{"id":"p75","cat":"aromas","nome":"Casa Flor Limpador Perfumado","preco":4.99,"desc":"Água de cocoAçaiGraviola…","img":"img/p75.jpg","top":false},{"id":"p76","cat":"panos","nome":"Pano Microfibra Alta performance","preco":14.99,"desc":"Limpa tudo sem fiapossem produtos quimicosecomaisR$ 14,99 Novidade…","img":"img/p76.jpg","top":true},{"id":"p77","cat":"panos","nome":"Pano Mágico Uso Geral","preco":7.99,"desc":"MicrofibraO Pano Mágico® Uso Geral é indicado para a limpeza em geral. Pode ser utilizado em todo tipo de superfície que pode ser molhada. Diminui em 50% o...R$ 7,99 Novidade…","img":"img/p77.jpg","top":false},{"id":"p78","cat":"panos","nome":"Ecomais® Carros","preco":24.99,"desc":"ECONOMIZE 50% DE TEMPO COM ÁKORAEcomais Carros é indicado para lavagem a seco, limpeza dos vidros, motor, painel e partes internas.40x40cmR$ 24,99 Novidade…","img":"img/p78.jpg","top":false},{"id":"p79","cat":"panos","nome":"Pano Mágico® Limpa Pisos","preco":34.99,"desc":"• O Pano Mágico® Limpa Pisos é o pano de limpeza ideal para diversos tipos pisos, como cerâmica, laminados, porcelanato, madeira e PVC. Ele reduz o tempo de...R$ 34,99 Novidade…","img":"img/p79.jpg","top":false},{"id":"p80","cat":"panos","nome":"Ecomais® Louças e Cristais","preco":39.99,"desc":"• O Ecomais® Louças e Cristais enxuga rapidamente a louça, deixando copos, pratos e talheres muito mais limpos e sem fiapos ou resíduos.•Vantagens: Enxuga...R$ 39,99 Novidade…","img":"img/p80.jpg","top":false},{"id":"p81","cat":"panos","nome":"Pano Mágico® Limpa Vidros","preco":19.99,"desc":"• O Pano Mágico® Limpa Vidros é altamente eficiente na limpeza de vidros e espelhos. O resultado é surpreendente, realmente não deixa fiapos, resíduos ou...R$ 19,99 Novidade…","img":"img/p81.jpg","top":false},{"id":"p82","cat":"panos","nome":"Pano Magico® Uso Geral Sem Costura (4 Unidades)","preco":19.99,"desc":"Pano Mágico® Uso Geral Sem Costura (4 unidades)O Pano Mágico® Uso Geral Sem Costura é a solução ideal para uma limpeza eficaz e prática. Perfeito para todas as superfícies que podem ser molhadas, ele reduz o...R$ 19,99…","img":"img/p82.jpg","top":false},{"id":"p83","cat":"pets","nome":"🧽 Point – Maridao Da Limpeza Pesada!","preco":19.99,"desc":"🧽 Point – Maridão da Limpeza Pesada!🚫🐶 Diga adeus ao cheiro de xixi!Com o Limpeza Pesada Point, sua casa fica livre de odores e com aquele cheirinho de limpeza que todo mundo ama!✅ Ideal para...","img":"img/p83.jpg","top":true},{"id":"p84","cat":"pets","nome":"🌲 Pinho Gel Point","preco":14.99,"desc":"Limpeza profunda com perfume duradouro!O Pinho Gel Point é um desinfetante com alto poder de limpeza e ação bactericida, ideal para áreas externas e internas...","img":"img/p84.jpg","top":false},{"id":"p85","cat":"pets","nome":"Cloro Gel Point Clean","preco":12,"desc":"🧼✨ Dica de Limpeza com Point Clean!Nada como um banheiro limpo de verdade!O Cloro Gel Point Clean é o aliado ideal pra faxina pesada: limpa, desinfeta e...","img":"img/p85.jpg","top":false},{"id":"p86","cat":"decoracao","nome":"Placa de madeira para decoração","preco":79.99,"desc":"Gratidão é a mais linda memória do coração.R$ 79,99 Novidade…","img":"img/p86.jpg","top":false},{"id":"p87","cat":"decoracao","nome":"Placa decorativa de aluminio","preco":49.99,"desc":"R$ 49,99 Novidade…","img":"img/p87.jpg","top":false},{"id":"p88","cat":"decoracao","nome":"Placa De Decoracao Com Palavras Motivacionais","preco":39.99,"desc":"Placa de decoração com palavras motivacionaisR$ 39,99 Novidade…","img":"img/p88.jpg","top":false},{"id":"p89","cat":"decoracao","nome":"Placa de decoração Biblica","preco":39.99,"desc":"Ao entrar, Ao sair.R$ 39,99 Novidade…","img":"img/p89.jpg","top":false},{"id":"p90","cat":"decoracao","nome":"Placa De Decoracao Dos Miliguidos Biblicos","preco":39.99,"desc":"Placa de decoração dos Miliguidos BiblicosVersiculo BiblicoR$ 39,99 Novidade…","img":"img/p90.jpg","top":false},{"id":"p91","cat":"decoracao","nome":"Quadro para banheiro","preco":24.99,"desc":"R$ 24,99 Novidade…","img":"img/p91.jpg","top":false},{"id":"p92","cat":"decoracao","nome":"Porta chaves casinha","preco":49.99,"desc":"Deus abençoe seu lar.R$ 49,99 Novidade…","img":"img/p92.jpg","top":true},{"id":"p93","cat":"decoracao","nome":"Porta chave porteira","preco":29.99,"desc":"Bem vindo!R$ 29,99 Novidade…","img":"img/p93.jpg","top":false},{"id":"p94","cat":"decoracao","nome":"Kit com 3 Galinhas","preco":29.99,"desc":"R$ 29,99 Novidade…","img":"img/p94.jpg","top":false},{"id":"p95","cat":"decoracao","nome":"Kit Pinguim c/3","preco":89.99,"desc":"R$ 89,99 Novidade…","img":"img/p95.jpg","top":false},{"id":"p96","cat":"decoracao","nome":"Arara Pequena","preco":129.99,"desc":"R$ 129,99 Novidade…","img":"img/p96.jpg","top":false},{"id":"p97","cat":"utensilios","nome":"Esponja uma unidade","preco":2.99,"desc":"💡 Dica: Troque a esponja regularmente para manter a higiene da sua casa em dia!","img":"img/p97.jpg","top":false},{"id":"p98","cat":"utensilios","nome":"Ecomais® Esponja de Coco","preco":9.99,"desc":"• O Ecomais® Esponja de Coco é feita de Celulose e fibras naturais de coco e se decompõe rapidamente no meio ambiente quando descartada. Possui apenas 2% de...","img":"img/p98.jpg","top":false},{"id":"p99","cat":"utensilios","nome":"🧽💪 Esponja Poliéster PowerMaid","preco":4.99,"desc":"Esponja Poliéster Multiuso da PowerMaid! Ideal para vidros, cristais, aço inox, porcelanas e até superfícies antiaderentes, ela limpa com suavidade sem riscar...","img":"img/p99.jpg","top":false},{"id":"p100","cat":"utensilios","nome":"🧼 Esponja Mágica PowerMaid ✨","preco":4.99,"desc":"Diga adeus às manchas difíceis com a incrível Esponja Mágica PowerMaid! Desenvolvida para remover sujeiras sem esforço, ela é perfeita para superfícies como...","img":"img/p100.jpg","top":false},{"id":"p101","cat":"utensilios","nome":"🪟✨ Esponja De Microfibra P Vidros","preco":4.99,"desc":"🪟✨ Esponja de Microfibra p/ VidrosO pano de microfibra Flash Limp para vidros foi desenvolvido especialmente para limpar sem riscar ou manchar superfícies lisas ou rugosas, como:🔹 Janelas🔹...","img":"img/p101.jpg","top":false},{"id":"p102","cat":"utensilios","nome":"📱💻 Esponjas De Microfibra P Telas Sensiveis","preco":4.99,"desc":"📱💻 Esponjas de Microfibra p/ Telas SensíveisO pano de microfibra Flash Limp para telas sensíveis é perfeito para limpar com segurança:🔸 Laptops e notebooks🔸 Tablets e smartphones🔸 Monitores e...","img":"img/p102.jpg","top":false},{"id":"p103","cat":"utensilios","nome":"✨ Esponja Multiuso Powermaid Em Poliester – Kit Com 3 Unidades","preco":14.99,"desc":"✨ Esponja Multiuso Powermaid em Poliéster – Kit com 3 UnidadesAs esponjas Powermaid Multiuso são ideais para quem busca praticidade na hora da limpeza, sem agredir as superfícies. Fabricadas em poliéster resistente, são.","img":"img/p103.jpg","top":false},{"id":"p104","cat":"utensilios","nome":"✨ Bombril – Esponja De Aco Com 1001 Utilidades (60g)","preco":2.9,"desc":"✨ Bombril – Esponja de Aço com 1001 Utilidades (60g)Referência nacional em limpeza, o Bombril é aquele item que não pode faltar na sua casa! Fabricado com aço de alta qualidade, ele garante uma limpeza poderosa e...","img":"img/p104.jpg","top":false},{"id":"p105","cat":"utensilios","nome":"🧽 Assolan – Esponja De La De Aco (45g)","preco":3.99,"desc":"🧽 Assolan – Esponja de Lã de Aço (45g)Máximo brilho, mínimo esforço! A Assolan é ideal para quem busca praticidade e eficiência na hora da limpeza pesada. Com textura firme e fácil de manusear, ela...","img":"img/p105.jpg","top":false},{"id":"p106","cat":"utensilios","nome":"🧼✨ Pano Multiuso Plus Celeste – Leve 5, Pague 3! 🧽💙","preco":4.99,"desc":"🔹 Contém 5 unidades – oferta leve 5, pague 3🔹 Tamanho: 28cm x 45cm – excelente cobertura🔹 Alta absorção e resistência🔹 Perfeito para uso na cozinha,...","img":"img/p106.jpg","top":false},{"id":"p107","cat":"utensilios","nome":"🧽✨ Pano Amarelo Multiuso Flash Limp","preco":7.99,"desc":"✅ Alta absorção de líquidos e sujeiras✅ Superfícies brilhando sem esforço✅ Seguro para móveis, cozinha, banheiro e vidros✅ Não risca – perfeito para...","img":"img/p107.jpg","top":false},{"id":"p108","cat":"utensilios","nome":"Panos de Microfibra Coloridos","preco":5.99,"desc":"Esses panos de microfibra é ideal para todo tipo de limpeza: vidros, móveis, carros, telas, cozinha e muito mais. Macios, superabsorventes e reutilizáveis, eles...","img":"img/p108.jpg","top":false},{"id":"p109","cat":"utensilios","nome":"Kit com 3 Sacos Xadrez","preco":12.99,"desc":"Alta absorção, resistência e muito estilo na sua cozinha!Com estampa xadrez clássica e tecido de qualidade, esses panos são ideais para secar louças,...","img":"img/p109.jpg","top":false},{"id":"p110","cat":"utensilios","nome":"🗑️ Sacos De Lixo – Alta Resistencia","preco":19.99,"desc":"🗑️ Sacos de Lixo – Alta Resistência💪 Praticidade, higiene e durabilidade para o seu dia a dia!Disponíveis em vários tamanhos, ideais para residências, comércios e empresas:📦 Pacote com 17...","img":"img/p110.jpg","top":true},{"id":"p111","cat":"utensilios","nome":"🌸 Saco De Lixo Perfumado 20 Litros 🌸","preco":29.99,"desc":"✅ Elimina os odores indesejados✅ Perfume suave e agradável✅ Resistência e praticidade no dia a dia✅ Ideal para lixeiras pequenas (pia e banheiro)✅ Cores...","img":"img/p111.jpg","top":false},{"id":"p112","cat":"utensilios","nome":"Rodo Fiory 40cm","preco":19.99,"desc":"Chega de esforço e desperdício de tempo! Apresentamos o Rodo Mágico de Espuma, seu novo aliado para deixar qualquer ambiente brilhando ✨…","img":"img/p112.jpg","top":true},{"id":"p113","cat":"utensilios","nome":"🧼💪 Rodo Multiuso De Plastico Com Borracha – 60cm","preco":29.99,"desc":"🧼💪 Rodo Multiuso de Plástico com Borracha – 60cmCom design moderno e funcional, o rodo multiuso com cabo é ideal para quem busca eficiência e rapidez na hora de limpar. Sua lâmina de borracha larga (60cm)...","img":"img/p113.jpg","top":false},{"id":"p114","cat":"utensilios","nome":"Daxxen® Rodo de Silicone","preco":59.99,"desc":"(NÃO INCLUI O CABO)O novo Daxxen® Rodo de Silicone é a solução definitiva para uma limpeza eficaz e sem dificuldades. Elimina até 98% da água, deixando suas...","img":"img/p114.jpg","top":false},{"id":"p115","cat":"utensilios","nome":"🧹 Vassoura Flory – Cores Vibrantes, Limpeza Eficiente!","preco":19.99,"desc":"Qualidade e beleza para o seu dia a dia!As vassouras Flory são ideais para quem busca praticidade, durabilidade e um toque de cor na hora da limpeza. Com...","img":"img/p115.jpg","top":true},{"id":"p116","cat":"utensilios","nome":"🍃🌿 Rastelo De Jardim Com Cabo De Madeira","preco":24.99,"desc":"🔸 Cabeça plástica resistente e leve🔸 Cabo de madeira firme e confortável para manuseio🔸 Design em leque para maior alcance na varrição🔸 Ideal para folhas...","img":"img/p116.jpg","top":false},{"id":"p117","cat":"utensilios","nome":"🧽💦 Limpador De Vidros Com Rodo E Esponja 2 Em 1","preco":29.99,"desc":"Ideal para janelas, para-brisas, box de banheiro e superfícies lisas em geral.🔹 Esponja de alta absorção que remove a sujeira com facilidade🔹 Rodo de...","img":"img/p117.jpg","top":false},{"id":"p118","cat":"utensilios","nome":"🧹 Kit Mini Vassoura e Pá","preco":19.99,"desc":"✅ Cerdas resistentes e flexíveis que não riscam as superfícies✅ Design ergonômico e moderno, disponível em cores suaves✅ Fácil de guardar: a pá encaixa...","img":"img/p118.jpg","top":false},{"id":"p119","cat":"utensilios","nome":"🚿 Tapete Antiderrapante Para Box","preco":19.99,"desc":"Banho mais seguro e estiloso com o Tapete Antiderrapante com Ventosas! Ideal para box ou banheiras, ele adere bem ao piso, evitando escorregões. Disponível em...","img":"img/p119.jpg","top":false},{"id":"p120","cat":"utensilios","nome":"🪰 Fita Cola Mosca – Armadilha Eficiente Para Insetos Voadores | 4 Uni","preco":15.99,"desc":"A Fita Cola Mosca é a solução ideal para manter ambientes livres dessas pragas incômodas, seja em casa, na cozinha, no comércio ou no campo.🟡 Alta aderência:...","img":"img/p120.jpg","top":false},{"id":"p121","cat":"utensilios","nome":"Varal De Presilhas Giratorio Compacto","preco":24.99,"desc":"Varal de Presilhas Giratório Compacto✅ Gancho giratório de 360° para fácil manuseio✅ Presilhas firmes que não danificam os tecidos✅ Ideal para ambientes pequenos✅ Material leve, durável e fácil...","img":"img/p121.jpg","top":false},{"id":"p122","cat":"utensilios","nome":"🧺✨ Saco Para Lavar Roupas Com Ziper – Tamanho P (25cm X 35cm)","preco":7.99,"desc":"🧺✨ Saco para Lavar Roupas com Zíper – Tamanho P (25cm x 35cm)O saco protetor para lavagem de roupas Mizza Home é ideal para preservar a qualidade das suas roupas delicadas durante a lavagem na máquina. Com zíper reforça…","img":"img/p122.jpg","top":false},{"id":"p123","cat":"utensilios","nome":"🪣 Balde Rosa 6 Litros Neon Com Alca Anatomica 💖","preco":15.9,"desc":"🪣 Balde Rosa 6 Litros Neon com Alça Anatômica 💖✨ Capacidade de 6 litros – tamanho perfeito para uso diário🖐️ Alça anatômica resistente – mais conforto e segurança no transporte🎀 Design moderno e vibrante...","img":"img/p123.jpg","top":false},{"id":"p124","cat":"utensilios","nome":"🪣 Balde 8l Eco Nature Com Alca Metalica 🌱","preco":12.99,"desc":"🪣 Balde 8L Eco Nature com Alça Metálica 🌱✅ Capacidade de 6 litros – tamanho ideal para tarefas domésticas ou profissionais✅ Alça metálica reforçada, que garante firmeza no transporte✅ Design...","img":"img/p124.jpg","top":false},{"id":"p125","cat":"utensilios","nome":"💧✨ Rodo Magico Dobravel Com Sistema De Autolimpeza 🧼🚿","preco":19.9,"desc":"💧✨ Rodo Mágico Dobrável com Sistema de Autolimpeza 🧼🚿Transforme a faxina do dia a dia em uma tarefa rápida e eficiente com o inovador Rodo Mágico Dobrável! Com design moderno e funcional, ele é perfeito para quem...","img":"img/p125.jpg","top":false},{"id":"p126","cat":"utensilios","nome":"🚪🛡️ Protetor de Porta em EVA","preco":4.99,"desc":"Diga adeus aos sustos com portas batendo! Este protetor em formato de “U” é feito de EVA macio e resistente, e foi projetado para impedir o fechamento total da...","img":"img/p126.jpg","top":false},{"id":"p127","cat":"utensilios","nome":"🧸🚪 Protetores De Porta Em Espuma","preco":4.99,"desc":"Mantenha os dedinhos dos pequenos protegidos com esses adoráveis protetores de porta em formato de bichinhos! Feitos de espuma macia e resistente, eles evitam...","img":"img/p127.jpg","top":false},{"id":"p128","cat":"utensilios","nome":"🧼💧 Protetor de Pia em Silicone","preco":15.9,"desc":"Chega de arranhões e barulhos incômodos ao lavar louça! Com este protetor de pia em silicone com encaixe, você garante mais segurança para suas louças e...","img":"img/p128.jpg","top":false},{"id":"p129","cat":"utensilios","nome":"💦✨ Tapete Protetor De Pia Com Ventosas","preco":9.99,"desc":"Dê adeus a arranhões, quebras e respingos com este prático e moderno tapete protetor de pia em PVC transparente. Com ventosas que fixam perfeitamente, ele...","img":"img/p129.jpg","top":false},{"id":"p130","cat":"utensilios","nome":"🍳🔥 Kit Luva + Apoio Termico Com Estampa Xadrez","preco":19.99,"desc":"🍳🔥 Kit Luva + Apoio Térmico com Estampa XadrezPrepare suas receitas com mais segurança e charme com este kit térmico estampado, composto por uma luva e um apoio para panelas. Com estampa xadrez vermelha e...","img":"img/p130.jpg","top":false},{"id":"p131","cat":"utensilios","nome":"✨ Bandeja Retangular De Vidro Lyor","preco":19.99,"desc":"Transforme a apresentação das suas receitas com a bandeja retangular Lyor, feita em vidro de alta qualidade e com acabamento em textura quadriculada que garante...","img":"img/p131.jpg","top":false},{"id":"p132","cat":"utensilios","nome":"☕ Placa Decorativa Café","preco":14.9,"desc":"Leve o charme das cafeterias para dentro da sua casa com essa linda placa decorativa com tema de café! Com acabamento rústico em madeira e corda para pendurar,...","img":"img/p132.jpg","top":false},{"id":"p133","cat":"utensilios","nome":"🧴 Dispenser De Vidro Home Sweet Home","preco":24.99,"desc":"🧴 Dispenser de Vidro - Home Sweet HomeTransforme o seu banheiro ou cozinha com um toque de charme e sofisticação! Este dispenser de vidro com a frase \"Home Sweet Home\" une funcionalidade e beleza em...","img":"img/p133.jpg","top":false},{"id":"p134","cat":"utensilios","nome":"Escova Multiuso De Silicone Com Cabo Coracao","preco":9.99,"desc":"Escova Multiuso de Silicone com Cabo Coração🔹 Cerdas em silicone resistentes que limpam sem agredir🔹 Ideal para roupas, sapatos, banheiro, cozinha e muito mais!🔹 Design ergonômico com alça em formato...","img":"img/p134.jpg","top":false},{"id":"p136","cat":"utensilios","nome":"Fogareiro a Gás 2 Bocas","preco":119.9,"desc":"🔹 Leve, portátil e super resistente – fácil de transportar e guardar🔹 Funciona com gás de botijão (GLP) – econômico e eficiente🔹 2 bocas para preparar duas...","img":"img/p136.jpg","top":false},{"id":"p137","cat":"utensilios","nome":"Porta Mel Acucar Em Acrilico Com Tampa E Colher🍯✨","preco":24.99,"desc":"Porta-Mel/Açúcar em Acrílico com Tampa e Colher🍯✨🔸 Design em formato de colmeia – moderno e delicado🔸 Ideal para mel, açúcar, geleias, molhos e muito mais🔸 Acompanha colher acrílica e tampa com pegador🔸...","img":"img/p137.jpg","top":false},{"id":"p138","cat":"utensilios","nome":"Quadro Decorativo🛁🌿","preco":24.9,"desc":"✨ Estampa divertida com cortina de estrelas✨ Elementos de plantas e luminárias pendentes✨ Toque de cor com detalhes em verde e laranja✨ Moldura discreta que...","img":"img/p138.jpg","top":false},{"id":"p139","cat":"utensilios","nome":"☕ “A Vida Comeca Depois Do Cafe!”","preco":14.99,"desc":"☕ “A vida começa depois do café!”Com acabamento delicado, corda rústica para pendurar e estilo retrô-moderno, ela é perfeita para criar um ambiente aconchegante, cheio de estilo e, claro, com a...","img":"img/p139.jpg","top":false},{"id":"p141","cat":"utensilios","nome":"🧼✨ Escova Multiuso Com Cerdas Resistentes","preco":4.99,"desc":"Com cerdas firmes e duráveis, ela garante uma limpeza profunda, seja em roupas, pisos, tapetes, azulejos ou áreas externas. E o melhor: com um design moderno e...","img":"img/p141.jpg","top":false},{"id":"p142","cat":"utensilios","nome":"🧺✨ Prendedor De Roupas Compact Flash Limp","preco":10.99,"desc":"Com design moderno e compacto, os prendedores vêm em cores suaves e variadas, perfeitos para quem quer unir funcionalidade e estilo na lavanderia.📦 Contém 12...","img":"img/p142.jpg","top":false},{"id":"p143","cat":"utensilios","nome":"🧼 Esponja Multiuso Com Base Para Cabo","preco":9.99,"desc":"✅ Benefícios:Compatível com cabos roscados padrãoEspuma de alta densidade com parte abrasivaIdeal para locais altos ou de difícil acessoLeve, resistente...","img":"img/p143.jpg","top":false},{"id":"p144","cat":"utensilios","nome":"🗑️ Lixeira De Bancada Com Tampa Basculante","preco":29.99,"desc":"🧹 Uso Ideal:Cozinha (para restos pequenos)Banheiro (papéis, algodões, etc.)Escritório ou penteadeira (papéis, lenços, maquiagem) 🖤 Cor: Preto com...","img":"img/p144.jpg","top":false},{"id":"p145","cat":"utensilios","nome":"💦 Mangueira Acquaflex 10m – Transparente E Resistente Com Engates Rap","preco":59.9,"desc":"💦 Mangueira Acquaflex 10m – Transparente e Resistente com Engates Ráp✅ Vantagens:Resistente à pressão da águaNão dobra facilmenteFácil de guardar e transportar Acompanha: 1 esguicho + 2 conectoresEsguicho com jato...","img":"img/p145.jpg","top":false},{"id":"p146","cat":"utensilios","nome":"🌟 Prendedor Plastico Aguia Branca","preco":4.99,"desc":"🌟 Prendedor Plástico Águia BrancaColorido traz mais vida à sua lavanderia!✅ Duráveis e resistentes✅ Não enferrujam✅ Cores vibrantes e alegres✅ Perfeitos para uso diário✨ Indústria...","img":"img/p146.jpg","top":false},{"id":"p147","cat":"utensilios","nome":"Organizador de Pia UZ","preco":19.99,"desc":"🧽 3 compartimentos funcionais para máxima organização💦 Base com ranhuras, que evita o acúmulo de água e facilita a secagem🎨 Design elegante e moderno, que...","img":"img/p147.jpg","top":false},{"id":"p148","cat":"utensilios","nome":"Organizador De Pia Com Escorredor Multiuso","preco":14.99,"desc":"✅ Drenagem eficiente com furos que evitam o acúmulo de água✅ Design compacto e funcional, ideal para otimizar o espaço✅ Fácil de limpar e durável, perfeito...","img":"img/p148.jpg","top":false},{"id":"p149","cat":"utensilios","nome":"Cesto Plástico com Gancho","preco":6.99,"desc":"🪝 Gancho giratório para pendurar em box, varões, portas ou armários🧼 Perfeito para ambientes úmidos, como banheiro e lavanderia🌈 Disponível em cores...","img":"img/p149.jpg","top":false},{"id":"p150","cat":"utensilios","nome":"Cesto Multiuso com Gancho","preco":12.99,"desc":"🌸 Design elegante e vazado, que garante ventilação e charme🧼 Material resistente e flexível, ideal para uso em ambientes úmidos🧴 Versatilidade total:...","img":"img/p150.jpg","top":false},{"id":"p151","cat":"utensilios","nome":"Processador De Alimentos Manual 500 Ml","preco":19.99,"desc":"Processador Manual de Alimentos é a solução rápida, prática e segura para triturar alho, cebola, ervas, legumes, carnes e muito mais. Com capacidade de 500 ml,...","img":"img/p151.jpg","top":false},{"id":"p152","cat":"utensilios","nome":"🔧 Leatherman Rev® – A Ferramenta 14 Em 1","preco":39.99,"desc":"14 funções essenciais em um único equipamento.✅ Alicate de bico fino e regular✅ Cortadores de fio✅ Abridor de garrafas e latas✅ Faca em aço inoxidável✅...","img":"img/p152.jpg","top":false},{"id":"p153","cat":"utensilios","nome":"🧄 Espremedor de Alho 5 em 1🧄","preco":12.99,"desc":"Praticidade, resistência e multifunção em um único utensílio! Esse espremedor de alho em alumínio é um verdadeiro coringa na cozinha. Além de espremer alho com...","img":"img/p153.jpg","top":false},{"id":"p154","cat":"utensilios","nome":"🍋 Espremedor De Limao Em Aluminio 🍋","preco":19.99,"desc":"🍋 Espremedor de Limão em Alumínio 🍋Tenha suco fresquinho em segundos com este espremedor de limão prático e resistente! Produzido em alumínio de alta qualidade, ele garante extração rápida do...","img":"img/p154.jpg","top":false},{"id":"p155","cat":"utensilios","nome":"🔥 Acendedor De Fogao Ergonomico E Longo","preco":9.99,"desc":"🔥 Acendedor de Fogão Ergonômico e LongoChega de se queimar tentando acender o fogão! Com nosso acendedor ergonômico longo, você garante acendimento rápido, seguro e higiênico. Seu design moderno com...","img":"img/p155.jpg","top":false},{"id":"p156","cat":"utensilios","nome":"🧄✨ Pilao De Madeira Alongado Com Socador","preco":19.99,"desc":"🧄✨ Pilão de Madeira Alongado com SocadorFeito em madeira resistente, possui acabamento liso e anatômico, que facilita o manuseio e garante uma trituração eficiente.🌿 Benefícios do Produto:Design ...","img":"img/p156.jpg","top":false},{"id":"p157","cat":"utensilios","nome":"🔪 Kit de Utensílios 4 em 1!","preco":49.9,"desc":"🔪 Faca multifuncional – Ideal para cortes precisos e rápidos;✂️ Tesoura culinária – Robusta e versátil, perfeita para cortar carnes, ervas e embalagens;🧅...","img":"img/p157.jpg","top":false},{"id":"p158","cat":"utensilios","nome":"Ralador Multifuncional Com Reservatorio","preco":39.99,"desc":"Ralador Multifuncional com Reservatório🔸 Acompanha 5 lâminas diferentes para ralar, fatiar e cortar com precisão🔸 Reservatório acoplado para armazenar os alimentos ralados — cozinha limpa, sem...","img":"img/p158.jpg","top":false},{"id":"p159","cat":"utensilios","nome":"Supergreen® Esponja Limpadora Extra Resistente","preco":9.99,"desc":"A Supergreen® Esponja Limpadora Extraresistente remove com facilidade todo tipo de mancha, gordura e encardido (paredes, plástico, couro, pisos, box de...","img":"img/p159.jpg","top":false},{"id":"p160","cat":"utensilios","nome":"Supergreen® com 4 unidades","preco":19.99,"desc":"Remove com facilidade todo tipo de mancha, gordura e encardido!A Supergreen® Esponja Limpadora remove com facilidade todo tipo de mancha, gordura e encardido...","img":"img/p160.jpg","top":false},{"id":"p161","cat":"utensilios","nome":"Guarda Chuva","preco":29.99,"desc":"","img":"img/p161.jpg","top":false},{"id":"p162","cat":"utensilios","nome":"Lixeira de Pia 4 Litros","preco":39.99,"desc":"Vermelho…","img":"img/p162.jpg","top":false},{"id":"p163","cat":"utensilios","nome":"Cesto De Lixo 4 Litros","preco":39.99,"desc":"Cinza…","img":"img/p163.jpg","top":false},{"id":"p164","cat":"utensilios","nome":"Lixeira de Pia 4 Litros","preco":39.99,"desc":"Branco…","img":"img/p164.jpg","top":false},{"id":"p165","cat":"utensilios","nome":"Luva de Látex Multiuso Celeste","preco":5.99,"desc":"Tamanho M…","img":"img/p165.jpg","top":false},{"id":"p166","cat":"utensilios","nome":"Porta Detergente Slim","preco":19.99,"desc":"","img":"img/p166.jpg","top":false},{"id":"p167","cat":"obra","nome":"PU 40","preco":13.99,"desc":"Cores. Branco. Cinza. PretoR$ 13,99 Novidade…","img":"img/p167.jpg","top":false},{"id":"p168","cat":"obra","nome":"Massa Plastica","preco":10.99,"desc":"ChumboTravertinoBrancoPretoR$ 10,99 Novidade…","img":"img/p168.jpg","top":false},{"id":"p169","cat":"obra","nome":"Lixa de Fibra","preco":4.8,"desc":"R$ 4,80 Novidade…","img":"img/p169.jpg","top":false},{"id":"p170","cat":"obra","nome":"Lápis de Cera Acrilex","preco":15.9,"desc":"R$ 15,90 Novidade…","img":"img/p170.jpg","top":false},{"id":"p171","cat":"obra","nome":"Óleofugante Alquilux","preco":339.99,"desc":"R$ 339,99 Novidade…","img":"img/p171.jpg","top":false},{"id":"p172","cat":"obra","nome":"Deo Line Limpa Rejunte 500ml","preco":19.99,"desc":"🧽 Deo Line Limpa Rejunte – Chega de rejunte encardido!O Limpa Rejunte Deo Line é a solução perfeita pra remover a sujeira mais difícil entre os azulejos,...R$ 19,99 Novidade…","img":"img/p172.jpg","top":true},{"id":"p173","cat":"obra","nome":"💥 Soda Cáustica Linhal 500g","preco":19.99,"desc":"Sua fórmula super potente atua dissolvendo gorduras, restos orgânicos e outras impurezas com facilidade, sendo ideal tanto para uso doméstico quanto...R$ 19,99 Novidade…","img":"img/p173.jpg","top":false},{"id":"p174","cat":"obra","nome":"Limpador De Mofo Etaniz C Borrifador","preco":49.99,"desc":"Limpador de Mofo Etaniz c/ borrifador🧼 Acabe com o mofo e bolor de forma fácil!O Limpador de Mofo Etaniz é a solução ideal para ambientes úmidos e com pouca ventilação.✨ Benefícios que fazem a...R$ 49,99 Novidade…","img":"img/p174.jpg","top":false},{"id":"p175","cat":"obra","nome":"Limpa Obras Concentrado Etaniz","preco":39.99,"desc":"🏗️ Limpeza Profissional com Resultado Imediato!O Limpa Obras Concentrado Etaniz é o aliado perfeito para remover resíduos de cimento, rejunte, argamassa e...R$ 39,99 Novidade…","img":"img/p175.jpg","top":false},{"id":"p176","cat":"obra","nome":"Limpa Piso Point Clean","preco":19.99,"desc":"✨Máxima Potência na Limpeza, Brilho Garantido✨Com o Limpa Piso Point Clean, a limpeza do seu ambiente ganha um novo nível de eficiência! Seja em casa ou no...R$ 19,99 Novidade…","img":"img/p176.jpg","top":false},{"id":"p177","cat":"obra","nome":"Doutor Restaure Limpa Pedra Pisos","preco":59.99,"desc":"Doutor Restaure - Limpa Pedra/Pisos🔧✨ Doutor Restaure Pisos – Resultado de Profissional!Seu piso está sem brilho e com aspecto envelhecido?Com Doutor Restaure, você devolve a vida ao seu chão...R$ 59,99 Novidade…","img":"img/p177.jpg","top":false},{"id":"p178","cat":"obra","nome":"Tira Ferrugem","preco":39.99,"desc":"é um produto especialmente desenvolvido para a remoção de ferrugem e oxidação em diversos tipos de superfícies. Sua fórmula eficaz atua...R$ 39,99 Novidade…","img":"img/p178.jpg","top":false},{"id":"p179","cat":"obra","nome":"Limpa Rejunte","preco":39.99,"desc":"Elimina o encardido severo e as incrustações que detergentes comuns não conseguem remover. Ele promove o clareamento do rejunte, devolvendo a estética original...R$ 39,99 Novidade…","img":"img/p179.jpg","top":false},{"id":"p180","cat":"obra","nome":"Pedra Americana","preco":29.99,"desc":"Supergreen® Pedra Americana A Pedra Americana remove manchas escuras de louças sanitárias, deixando-as como novas.Limpa sujeiras incrustadas em pisos cerâmicos...R$ 29,99 Novidade…","img":"img/p180.jpg","top":false},{"id":"p181","cat":"obra","nome":"MATA FORMIGA","preco":17.5,"desc":"R$ 17,50 Novidade…","img":"img/p181.jpg","top":false},{"id":"p182","cat":"obra","nome":"BLATACEL Mata Barata","preco":17.5,"desc":"R$ 17,50 Novidade…","img":"img/p182.jpg","top":false},{"id":"p183","cat":"obra","nome":"Ferra Rato veneno","preco":19.99,"desc":"R$ 19,99 Novidade…","img":"img/p183.jpg","top":false},{"id":"p184","cat":"obra","nome":"Luva sanro G","preco":7.99,"desc":"FitSoftR$ 7,99 Novidade…","img":"img/p184.jpg","top":false},{"id":"p185","cat":"obra","nome":"M.F.Q Respiradores Descartáveis","preco":1.99,"desc":"PFF-2(s) valvuladaR$ 1,99 Novidade…","img":"img/p185.jpg","top":false},{"id":"p186","cat":"obra","nome":"Fita Adesiva Transparente Durex","preco":17,"desc":"Fita adesiva transparente para uso geral.","img":"","top":false},{"id":"p187","cat":"automotivo","nome":"Luva Multiuso De Microfibra Powermaid","preco":39.9,"desc":"🧤 Luva Multiuso de MicrofibraA solução prática e eficiente para a limpeza do dia a dia! Com design anatômico e tecido em microfibra ultra macia, essa luva é...","img":"img/p187.jpg","top":true},{"id":"p188","cat":"automotivo","nome":"🚗 Cera Proauto Tradicional Com Carnauba – 200g","preco":24.99,"desc":"🚗 Cera Proauto Tradicional com Carnaúba – 200gDê um brilho intenso e proteção prolongada ao seu carro com a Cera Proauto com Carnaúba, a nº1 em todo o Brasil!Formulada com carnaúba natural, ela garante um...","img":"img/p188.jpg","top":false},{"id":"p189","cat":"automotivo","nome":"🔧 Lubrificante Grafite Com Po – Emavi","preco":4.99,"desc":"🔧 Lubrificante Grafite com Pó – EmaviEficiência na palma da mão! Ideal para lubrificar fechaduras, trilhos de janelas, dobradiças, cadeados e até mecanismos delicados.🛠️ Por que usar?✅ Reduz...","img":"img/p189.jpg","top":false},{"id":"p190","cat":"automotivo","nome":"Polidor de Metais Polidoro","preco":24.9,"desc":"✨ Polidor de Metais Polidoro - Brilho Impecável em Segundos! ✨Deixe seus metais sempre brilhando como novos com o Polidor de Metais Polidoro! Com uma fórmula...","img":"img/p190.jpg","top":false},{"id":"p191","cat":"automotivo","nome":"Auto Craft Lava Autos 500ml","preco":12.9,"desc":"🚗 Auto Craft Lava Autos – Brilho e proteção pro seu carrão!O queridinho dos apaixonados por carro! O Auto Craft Lava Autos limpa, protege e dá aquele brilho e...","img":"img/p191.jpg","top":false},{"id":"p192","cat":"automotivo","nome":"Desengraxante Automotivo Point","preco":14.99,"desc":"🔧 Motor engordurado? Peças sujas?O Desengraxante Automotivo Point é ideal para quem busca potência e resultado na limpeza pesada.💥 Remove graxa, óleo e...","img":"img/p192.jpg","top":false},{"id":"p193","cat":"automotivo","nome":"🚗 Lava Carros Point – Detergente Automotivo 5l","preco":19.99,"desc":"Brilho intenso e limpeza sem agredir a pintura!O Detergente Automotivo Point foi desenvolvido especialmente para lavar carros, motos e veículos em geral. Sua...","img":"img/p193.jpg","top":true},{"id":"p194","cat":"automotivo","nome":"Limpa Telas","preco":19.99,"desc":"Remove gordura e sujeira que prejudicam a visão das telas, protegendo e mantendo o brilho por mais tempo. Indicado para LCD/LED, smartphones, Smart TVs,...","img":"img/p194.jpg","top":false},{"id":"p195","cat":"automotivo","nome":"Limpa Parabrisa","preco":19.99,"desc":"Remove rapidamente oleosidade, poeira, insetos e a névoa do vidro, garantindo transparência e melhor visibilidade ao dirigir.Onde usar: No reservatório do...","img":"img/p195.jpg","top":false},{"id":"p196","cat":"automotivo","nome":"Auto Fresh Black","preco":19.99,"desc":"Neutraliza odores indesejados (como mofo ou tabaco) e perfuma com notas profundas que transmitem poder e elegância.","img":"img/p196.jpg","top":false},{"id":"p197","cat":"automotivo","nome":"Auto Fresh Carro Novo","preco":19.99,"desc":"Elimina odores acumulados pelo uso diário e perfuma com notas características que transmitem limpeza absoluta e renovação.","img":"img/p197.jpg","top":false},{"id":"p198","cat":"automotivo","nome":"Auto Fresh Citrus","preco":19.99,"desc":"Neutraliza instantaneamente odores de umidade e alimentos, perfumando com notas de limão e laranja que transmitem higiene e vigor.","img":"img/p198.jpg","top":false},{"id":"p199","cat":"automotivo","nome":"Auto Fresh Marine","preco":19.99,"desc":"Neutraliza odores rapidamente e perfuma com notas marinhas que transmitem serenidade, frescor e bem-estar.","img":"img/p199.jpg","top":false},{"id":"p200","cat":"automotivo","nome":"Limpa Couros","preco":49.99,"desc":"Limpador desenvolvido para higienização profunda de couro, removendo sujeiras e resíduos sem danificar o material. Sua ação química dispensa esfregação...","img":"img/p200.jpg","top":false},{"id":"p201","cat":"automotivo","nome":"Pano para limpeza de carros","preco":24.99,"desc":"","img":"img/p201.jpg","top":false},{"id":"p202","cat":"automotivo","nome":"Silicone Spray","preco":22.9,"desc":"Lavanda…","img":"img/p202.jpg","top":false},{"id":"p203","cat":"pessoal","nome":"🧴✨ Creme Hidratante Sebo De Carneiro Fortision – Eco Flora 150g","preco":10,"desc":"O Creme Sebo de Carneiro Fortision da Eco Flora é o cuidado que sua pele merece! Formulado especialmente para hidratar profundamente as regiões mais secas do...","img":"img/p203.jpg","top":false},{"id":"p204","cat":"pessoal","nome":"💪🔥 Pomada Massageadora Canela De Velho – Charmelle 150g","preco":10,"desc":"A Pomada Canela de Velho Charmelle é a aliada perfeita para quem busca conforto e bem-estar no dia a dia. Com uma combinação poderosa de Arnica, Alecrim,...","img":"img/p204.jpg","top":false},{"id":"p205","cat":"pessoal","nome":"💪🌿 Pomada Massageadora Fisiofort Premium – Bio Instinto 150g","preco":10,"desc":"A Fisiofort Premium é uma pomada massageadora de alta performance desenvolvida para quem precisa de alívio rápido e eficaz em dores musculares e articulares....","img":"img/p205.jpg","top":false},{"id":"p206","cat":"pessoal","nome":"Limpa Tênis","preco":19.99,"desc":"Elimina a sujeira acumulada, marcas de uso e encardidos urbanos sem a necessidade de molhar o calçado. Por dispensar o enxágue, ele evita o mau cheiro causado...","img":"img/p206.jpg","top":true},{"id":"p207","cat":"pessoal","nome":"Valious Cosmetics® Haste De Bambu E Algodao","preco":19.99,"desc":"Valious Cosmetics® Haste de Bambu e AlgodãoValious Cosmetics® Haste de Bambu e Algodão é produzido a partir do bambu e algodão. A matéria prima é cultivada de forma sustentável.Caixa com 200 hastes…","img":"img/p207.jpg","top":false},{"id":"p208","cat":"pessoal","nome":"Valious Cosmetics® Removedor De Calos","preco":19.99,"desc":"O Valious® Removedor de Calos chegou para resolver o problema de muitas pessoas que tem calos provocados por prática esportiva ou trabalho de uma maneira geral....","img":"img/p208.jpg","top":false},{"id":"p209","cat":"pessoal","nome":"Foffs® Esponja Super Macia Banho","preco":19.99,"desc":"Cuidado único para você e para o meio ambiente. Fabricada a partir de fibras vegetais (batata) e minerais naturais, possui toque suave e limpeza profunda da...","img":"img/p209.jpg","top":false},{"id":"p210","cat":"pessoal","nome":"Foffs® Esponja Vegetal De Celulose Banho","preco":9.99,"desc":"Foffs Esponja Vegetal é um produto 100% celulose e limpa profundamente sua pele, sem liberar contaminantes. Toque suave e pele mais sedosa.","img":"img/p210.jpg","top":false},{"id":"p211","cat":"pessoal","nome":"Foffs® Sapinho Sapeca","preco":9.99,"desc":"• Foffs® Sapinho Sapeca traz higiene, delicadeza e alegria para sua casa! Mais alegria no banho. Seu filho vai adorar a Foffs Esponja de Celulose. Com toque...","img":"img/p211.jpg","top":false},{"id":"p212","cat":"pessoal","nome":"Pano Mágico® Lentes e Telas","preco":19.99,"desc":"• O Pano Mágico® Lentes e Telas Além de limpar usando somente água, deixa lentese telas brilhantes e acompanha estojo e um mini pulverizador. Super prático....","img":"img/p212.jpg","top":false}];
+
+function fallbackMark(catId){
+  const c = CATEGORIAS.find(x=>x.id===catId);
+  return `<span class="icon-fallback">${c?c.nome:"Casa Limpeza"}</span>`;
+}
+
+/* =========================================================
+   APP
+   ========================================================= */
+const $ = s => document.querySelector(s);
+const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const byId = Object.fromEntries(PRODUTOS.map(p=>[p.id,p]));
+
+const store = {
+  get(k,f){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):f }catch(e){ return f } },
+  set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)) }catch(e){} }
+};
+let cart = store.get("clc-cart",{});
+for (const id in cart) if(!byId[id]) delete cart[id];
+let activeCat = "home";
+let sortMode = "rel";
+
+const count = () => Object.values(cart).reduce((a,b)=>a+b,0);
+const total = () => Object.entries(cart).reduce((s,[id,q])=>s+byId[id].preco*q,0);
+
+function thumb(p){
+  return p.img
+    ? `<img src="${p.img}" alt="${p.nome}" loading="lazy">`
+    : fallbackMark(p.cat);
+}
+
+function controls(p){
+  const q = cart[p.id]||0;
+  if(!q) return `<button class="add" data-add="${p.id}" aria-label="Adicionar ${p.nome}">Adicionar</button>`;
+  return `<div class="stepper" role="group" aria-label="Quantidade de ${p.nome}">
+    <button data-dec="${p.id}" aria-label="Diminuir">−</button><span>${q}</span><button data-inc="${p.id}" aria-label="Aumentar">+</button></div>`;
+}
+
+function cardHtml(p){
+  const q = cart[p.id]||0;
+  return `<article class="card${q?" in":""}" data-card="${p.id}">
+    <div class="thumb">${thumb(p)}${p.top?'<span class="ribbon">Mais vendido</span>':""}${q?`<span class="qty-tag">${q}x</span>`:""}</div>
+    <div class="body">
+      <h3 class="pname">${p.nome}</h3>
+      <p class="pdesc">${p.desc}</p>
+      <span class="price">${brl(p.preco)}</span>
+      <span data-ctrl="${p.id}">${controls(p)}</span>
+    </div></article>`;
+}
+
+function sortList(list){
+  const arr = list.slice();
+  if(sortMode==="asc") arr.sort((a,b)=>a.preco-b.preco);
+  else if(sortMode==="desc") arr.sort((a,b)=>b.preco-a.preco);
+  else if(sortMode==="az") arr.sort((a,b)=>a.nome.localeCompare(b.nome,"pt-BR"));
+  else if(sortMode==="top") arr.sort((a,b)=>(b.top-a.top));
+  return arr;
+}
+
+function catLabel(cat){
+  if(cat==="all") return "Todos os produtos";
+  if(cat==="top") return "Mais vendidos";
+  return (CATEGORIAS.find(c=>c.id===cat)||{}).nome || "Produtos";
+}
+
+function normTerm(){
+  return $("#q").value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+}
+function matchTerm(p, term){
+  return !term || (p.nome+" "+p.desc).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").includes(term);
+}
+
+function renderHomeView(){
+  const sections = [
+    {id:"top", nome:"Mais vendidos", flag:true, list: PRODUTOS.filter(p=>p.top)},
+    ...CATEGORIAS.map(c=>({id:c.id, nome:c.nome, list: PRODUTOS.filter(p=>p.cat===c.id)}))
+  ].filter(s=>s.list.length);
+
+  $("#catalog").innerHTML = sections.map(s=>`
+    <div class="home-section" data-cat="${s.id}">
+      <div class="home-section-head">
+        <h2>${s.flag?'<span class="flag">Top</span>':""}${s.nome}</h2>
+        <button class="seeall" data-goto="${s.id}">Ver tudo (${s.list.length})
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="carousel-track">${s.list.slice(0,14).map(p=>`<div class="carousel-item">${cardHtml(p)}</div>`).join("")}</div>
+    </div>`).join("");
+}
+
+function renderGridView(cat, term){
+  let list;
+  if(cat==="all") list = PRODUTOS.filter(p=>matchTerm(p,term));
+  else if(cat==="top") list = PRODUTOS.filter(p=>p.top && matchTerm(p,term));
+  else list = PRODUTOS.filter(p=>p.cat===cat && matchTerm(p,term));
+  list = sortList(list);
+  const title = term ? `Resultados para "${$("#q").value.trim()}"` : catLabel(cat);
+
+  $("#catalog").innerHTML = `<div class="catalog-top"><h2>${title}</h2><span class="n">${list.length} ${list.length===1?"produto":"produtos"}</span></div>` +
+    (list.length ? `<div class="grid">${list.map(cardHtml).join("")}</div>` : `<div class="empty-search"><b>Nada encontrado</b>Tente outro nome, como “detergente” ou “amaciante”.</div>`);
+}
+
+function renderCatalog(){
+  const term = normTerm();
+  if(term){ renderGridView("all", term); return; }
+  if(activeCat==="home"){ renderHomeView(); return; }
+  renderGridView(activeCat, "");
+}
+
+function refreshCard(id){
+  const cards = document.querySelectorAll(`[data-card="${id}"]`);
+  if(!cards.length) return;
+  const p = byId[id], q = cart[id]||0;
+  cards.forEach(card=>{
+    card.classList.toggle("in", !!q);
+    card.querySelector("[data-ctrl]").innerHTML = controls(p);
+    const tag = card.querySelector(".qty-tag");
+    if(q){ if(tag) tag.textContent = `${q}x`; else card.querySelector(".thumb").insertAdjacentHTML("beforeend",`<span class="qty-tag">${q}x</span>`); }
+    else if(tag) tag.remove();
+  });
+}
+
+function setQty(id, q){
+  if(q<=0) delete cart[id]; else cart[id]=Math.min(q,99);
+  store.set("clc-cart",cart);
+  refreshCard(id);
+  renderSummary();
+  if($("#drawer").classList.contains("open")) renderItems();
+}
+
+function renderSummary(){
+  const n = count();
+  const b = $("#badge");
+  b.hidden = !n; b.textContent = n;
+  b.classList.remove("bump"); void b.offsetWidth; if(n) b.classList.add("bump");
+  $("#barCount").textContent = `${n} ${n===1?"item":"itens"}`;
+  $("#barTotal").textContent = brl(total());
+  $("#bar").classList.toggle("show", n>0 && !$("#drawer").classList.contains("open"));
+  $("#total").textContent = brl(total());
+  $("#toForm").setAttribute("aria-disabled", n? "false":"true");
+}
+
+function renderItems(){
+  const ids = Object.keys(cart);
+  if(!ids.length){
+    $("#items").innerHTML = `<div class="empty-cart"><b>Seu carrinho está vazio</b>Adicione produtos para montar o pedido.</div>`;
+    return;
+  }
+  $("#items").innerHTML = ids.map(id=>{
+    const p = byId[id], q = cart[id];
+    return `<div class="line-item">
+      <div class="li-img">${thumb(p)}</div>
+      <div><div class="li-name">${p.nome}</div><div class="li-sub">${brl(p.preco)} cada · <b>${brl(p.preco*q)}</b></div></div>
+      <div class="li-right">
+        <div class="stepper" role="group" aria-label="Quantidade de ${p.nome}"><button data-dec="${id}" aria-label="Diminuir">−</button><span>${q}</span><button data-inc="${id}" aria-label="Aumentar">+</button></div>
+        <button class="remove" data-rm="${id}">Remover</button>
+      </div></div>`;
+  }).join("");
+}
+
+/* Drawer / steps */
+let step = "cart";
+function openDrawer(){
+  renderItems(); showStep("cart");
+  $("#drawer").classList.add("open"); $("#scrim").classList.add("open");
+  $("#drawer").setAttribute("aria-hidden","false");
+  document.body.style.overflow="hidden";
+  $("#bar").classList.remove("show");
+  setTimeout(()=>$("#close").focus(),50);
+}
+function closeDrawer(){
+  $("#drawer").classList.remove("open"); $("#scrim").classList.remove("open");
+  $("#drawer").setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+  renderSummary();
+}
+function showStep(s){
+  step = s;
+  const f = s==="form";
+  $("#stepCart").hidden = f; $("#stepForm").hidden = !f;
+  $("#back").hidden = !f; $("#toForm").hidden = f; $("#send").hidden = !f;
+  $("#dTitle").textContent = f ? "Seus dados" : "Seu carrinho";
+  if(f){ updateRecap(); updateLink(); }
+  $(".d-body").scrollTop = 0;
+}
+
+/* Form */
+const saved = store.get("clc-cliente",{});
+["nome","tel","rua","num","bairro","comp"].forEach(k=>{ if(saved[k]) $("#"+k).value = saved[k]; });
+if(saved.mod) { const r=document.querySelector(`input[name=mod][value="${saved.mod}"]`); if(r) r.checked=true; }
+
+const val = n => document.querySelector(`input[name=${n}]:checked`).value;
+function syncForm(){
+  $("#addr").hidden = val("mod")!=="Entrega";
+  $("#troco").hidden = val("pag")!=="Dinheiro";
+  $("#feeNote").textContent = val("mod")==="Entrega" ? "A taxa de entrega, se houver, é combinada no WhatsApp." : "Você retira na loja; o endereço é enviado no WhatsApp.";
+}
+$("#tel").addEventListener("input",e=>{
+  let d = e.target.value.replace(/\D/g,"").slice(0,11);
+  e.target.value = d.length>10 ? `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`
+    : d.length>6 ? `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`
+    : d.length>2 ? `(${d.slice(0,2)}) ${d.slice(2)}` : d;
+});
+
+function validate(show){
+  const checks = [["fNome",$("#nome").value.trim().length>=2],["fTel",$("#tel").value.replace(/\D/g,"").length>=10]];
+  if(val("mod")==="Entrega") checks.push(["fRua",!!$("#rua").value.trim()],["fNum",!!$("#num").value.trim()],["fBairro",!!$("#bairro").value.trim()]);
+  let ok = true;
+  checks.forEach(([id,good])=>{ if(!good) ok=false; if(show) $("#"+id).classList.toggle("err",!good); else if(good) $("#"+id).classList.remove("err"); });
+  return ok;
+}
+
+function buildMessage(){
+  const L = [];
+  L.push(`🧾 *NOVO PEDIDO | ${LOJA}*`, "");
+  L.push(`👤 *Cliente:* ${$("#nome").value.trim()}`);
+  L.push(`📱 *WhatsApp:* ${$("#tel").value.trim()}`);
+  L.push("");
+  L.push("🛒 *Itens do pedido:*");
+  Object.entries(cart).forEach(([id,q])=>{
+    const p = byId[id];
+    L.push(`• ${q}x ${p.nome} (${brl(p.preco)} cada) = *${brl(p.preco*q)}*`);
+  });
+  L.push("", `💰 *Total dos produtos:* ${brl(total())}`, `📦 *Quantidade de itens:* ${count()}`, "");
+  if(val("mod")==="Entrega"){
+    L.push("🛵 *Receber:* Entrega");
+    let end = `${$("#rua").value.trim()}, ${$("#num").value.trim()} - ${$("#bairro").value.trim()}`;
+    if($("#comp").value.trim()) end += ` (${$("#comp").value.trim()})`;
+    L.push(`📍 *Endereço:* ${end}`);
+  } else L.push("🏠 *Receber:* Retirada na loja");
+  let pag = val("pag");
+  if(pag==="Dinheiro" && $("#trocoV").value.trim()) pag += ` (troco para R$ ${$("#trocoV").value.trim()})`;
+  L.push(`💳 *Pagamento:* ${pag}`);
+  const obs = $("#obs").value.trim();
+  L.push(`📝 *Observação:* ${obs || "Nenhuma"}`);
+  return L.join("\n");
+}
+function updateLink(){
+  $("#send").href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage())}`;
+}
+function updateRecap(){
+  $("#recap").innerHTML = `<div><span>${count()} ${count()===1?"item":"itens"}</span><b>${brl(total())}</b></div>`;
+}
+$("#stepForm").addEventListener("input",()=>{ syncForm(); validate(false); updateLink();
+  store.set("clc-cliente",{nome:$("#nome").value,tel:$("#tel").value,rua:$("#rua").value,num:$("#num").value,bairro:$("#bairro").value,comp:$("#comp").value,mod:val("mod")});
+});
+$("#stepForm").addEventListener("submit",e=>e.preventDefault());
+$("#send").addEventListener("click",e=>{
+  if(!count() || !validate(true)){
+    e.preventDefault();
+    const bad = document.querySelector(".field.err input"); if(bad) bad.focus();
+    return;
+  }
+  updateLink();
+  setTimeout(()=>{
+    cart = {}; store.set("clc-cart",cart);
+    $("#stepForm").querySelector("#obs").value="";
+    renderCatalog(); renderSummary(); closeDrawer();
+  },400);
+});
+
+/* Events */
+document.addEventListener("click",e=>{
+  const t = e.target.closest("[data-add],[data-inc],[data-dec],[data-rm]");
+  if(!t) return;
+  if(t.dataset.add) setQty(t.dataset.add,1);
+  if(t.dataset.inc) setQty(t.dataset.inc,(cart[t.dataset.inc]||0)+1);
+  if(t.dataset.dec) setQty(t.dataset.dec,(cart[t.dataset.dec]||0)-1);
+  if(t.dataset.rm) setQty(t.dataset.rm,0);
+  const ctrl = document.querySelector(`[data-ctrl="${t.dataset.add||t.dataset.inc||t.dataset.dec||t.dataset.rm}"] button:last-child`);
+  if(t.dataset.add && ctrl) ctrl.focus();
+});
+$("#openCart").onclick = openDrawer;
+$("#bar").onclick = openDrawer;
+$("#close").onclick = closeDrawer;
+$("#scrim").onclick = closeDrawer;
+$("#back").onclick = ()=>showStep("cart");
+$("#toForm").onclick = ()=>{ if(count()) { syncForm(); showStep("form"); } };
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && $("#drawer").classList.contains("open")) closeDrawer(); });
+let qt; $("#q").addEventListener("input",()=>{ clearTimeout(qt); qt=setTimeout(renderCatalog,120); });
+$("#sort").addEventListener("change",e=>{ sortMode=e.target.value; renderCatalog(); });
+
+/* Category filter list (single-select) + top-sellers quick link */
+function catCount(id){
+  if(id==="all") return PRODUTOS.length;
+  if(id==="top") return PRODUTOS.filter(p=>p.top).length;
+  return PRODUTOS.filter(p=>p.cat===id).length;
+}
+const chipDefs = [{id:"home",nome:"Início"},{id:"all",nome:"Todos"},{id:"top",nome:"Mais vendidos",top:true}, ...CATEGORIAS.filter(c=>PRODUTOS.some(p=>p.cat===c.id))];
+$("#cats").innerHTML = chipDefs.map(c=>
+  `<button class="cat-link${c.top?" top-link":""}" data-filter="${c.id}" aria-current="${c.id==='home'}">${c.nome}${c.id!=="home"?`<span class="cnt">${catCount(c.id)}</span>`:""}</button>`
+).join("");
+function goTo(catId){
+  activeCat = catId;
+  $("#q").value = "";
+  document.querySelectorAll(".cat-link").forEach(c=>c.setAttribute("aria-current", c.dataset.filter===activeCat));
+  renderCatalog();
+  window.scrollTo({top: $("#loja").offsetTop - 90, behavior: matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+}
+$("#cats").addEventListener("click",e=>{
+  const b = e.target.closest("[data-filter]"); if(!b) return;
+  goTo(b.dataset.filter);
+});
+$("#catalog").addEventListener("click",e=>{
+  const b = e.target.closest("[data-goto]"); if(!b) return;
+  goTo(b.dataset.goto);
+});
+
+/* Deep link: #cozinha etc. */
+renderCatalog(); renderSummary(); syncForm();
+const h = decodeURIComponent(location.hash).toLowerCase();
+const hit = CATEGORIAS.find(c=>h.includes(c.id));
+if(hit) goTo(hit.id);
+</script>
+</body>
+</html>
